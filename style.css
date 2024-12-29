@@ -105,7 +105,8 @@ nav ul li a:hover {
 section h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #080707; /* Accent color */
+    color: #f74343
+; /* Accent color */
 }
 
 section p {
