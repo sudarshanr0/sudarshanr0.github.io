@@ -1,4 +1,4 @@
-/* General styles */
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,13 +7,13 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #121212; /* Default to dark mode */
-    color: #ccc; /* Light gray text for dark mode */
+    background-color: #121212; /* Default: Dark Mode */
+    color: #ccc;
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Container style to center content */
+/* Container */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -23,12 +23,12 @@ body {
 
 /* Header Section */
 header {
-    background: linear-gradient(135deg, #333, #444); /* Dark gradient for dark theme */
+    background: linear-gradient(135deg, #333, #444);
     color: #fff;
     padding: 50px 0;
     text-align: center;
     border-radius: 12px;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
 }
 
 .header-content {
@@ -38,18 +38,13 @@ header {
     gap: 30px;
 }
 
-/* Profile Picture */
 .profile-pic {
-    border-radius: 50%; /* Circular shape */
+    border-radius: 50%;
     width: 250px;
     height: 250px;
     object-fit: cover;
-    border: 5px solid #444; /* Dark border */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
-
-.text-content {
-    max-width: 500px;
+    border: 5px solid #444;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
@@ -63,13 +58,13 @@ header p {
     margin-bottom: 20px;
 }
 
-/* Navigation Bar */
+/* Navigation */
 nav {
     background-color: #222;
     padding: 10px 0;
     margin-bottom: 40px;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 nav ul {
@@ -92,12 +87,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #ff7e5f; /* Color on hover */
+    background-color: #ff7e5f;
     border-radius: 4px;
     transform: scale(1.05);
 }
 
-/* Section Styles */
+/* Section */
 .section {
     margin-bottom: 60px;
     text-align: center;
@@ -106,7 +101,7 @@ nav ul li a:hover {
 section h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #f74343; /* Accent color */
+    color: #f74343;
 }
 
 section p {
@@ -114,7 +109,7 @@ section p {
     line-height: 1.8;
 }
 
-/* Work Section */
+/* List Links */
 ul {
     list-style-type: none;
     padding: 0;
@@ -140,7 +135,7 @@ ul li a:hover {
     transform: scale(1.05);
 }
 
-/* Footer Section */
+/* Footer */
 footer {
     background-color: #222;
     color: white;
@@ -211,6 +206,11 @@ body.light-mode .section {
     display: block;
     z-index: 1000;
     transition: all 0.3s ease;
+}
+
+body.light-mode .back-to-top-btn {
+    background-color: #0056b3;
+    color: #fff;
 }
 
 .back-to-top-btn:hover {
