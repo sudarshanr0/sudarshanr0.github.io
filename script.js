@@ -4,7 +4,7 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
         e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
-        
+
         window.scrollTo({
             top: targetElement.offsetTop - 60, // Adjust scroll position (for fixed nav bar)
             behavior: 'smooth'
@@ -17,13 +17,11 @@ const toggleButton = document.querySelector('.toggle-button');
 toggleButton.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     document.body.classList.toggle('light-mode');
-    const currentMode = document.body.classList.contains('dark-mode') ? 'Dark' : 'Light';
-    toggleButton.textContent = `Toggle ${currentMode} Mode`; // Update button text
+
+    // Update button text based on current mode
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    toggleButton.textContent = isDarkMode ? 'Toggle to Light Mode' : 'Toggle to Dark Mode';
 });
-
-
-
-
 
 // Form Validation (For Contact Form)
 const contactForm = document.getElementById('contact-form');
@@ -83,10 +81,4 @@ window.onscroll = function () {
     }
 };
 
-// Scroll to the top when the button is clicked
-backToTopButton.addEventListener('click', function () {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth' // Smooth scrolling
-    });
-});
+// Scroll to the top when the button is cl
