@@ -245,3 +245,10 @@ body.dark-mode .toggle-button:hover {
     background-color: #ff7e5f;
 }
 
+#form-feedback {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
