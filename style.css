@@ -7,9 +7,10 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #121212; /* Dark background */
-    color: #ccc;  /* Light gray text for dark mode */
+    background-color: #121212; /* Default to dark mode */
+    color: #ccc; /* Light gray text for dark mode */
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Container style to center content */
@@ -105,8 +106,7 @@ nav ul li a:hover {
 section h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #f74343
-; /* Accent color */
+    color: #f74343; /* Accent color */
 }
 
 section p {
@@ -154,48 +154,7 @@ footer p {
     font-size: 1rem;
 }
 
-/* Dark Mode Styles */
-body.dark-mode {
-    background-color: #121212;
-    color: #ccc;
-}
-
-body.dark-mode header {
-    background: linear-gradient(135deg, #333, #444);
-}
-
-body.dark-mode nav {
-    background-color: #222;
-}
-
-body.dark-mode .profile-pic {
-    border: 5px solid #333;
-}
-
-body.dark-mode .section {
-    background-color: #222;
-    color: #ccc;
-}
-
-body.dark-mode .toggle-button {
-    background-color: #ff7e5f;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-}
-
-/* Button hover effect */
-body.dark-mode .toggle-button:hover {
-    background-color: #feb47b;
-}
-
-/* Light Mode Styles */
+/* Light Mode */
 body.light-mode {
     background-color: #fff;
     color: #333;
@@ -218,17 +177,26 @@ body.light-mode .section {
     color: #333;
 }
 
-body.light-mode .toggle-button {
-    background-color: #feb47b;
-    color: #333;
-}
-
-/* Hover Effect for the Toggle Button */
-.toggle-button:hover {
+/* Toggle Button */
+.toggle-button {
     background-color: #ff7e5f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: all 0.3s ease;
 }
 
-/* Style for the Back to Top button */
+.toggle-button:hover {
+    background-color: #feb47b;
+}
+
+/* Back to Top Button */
 .back-to-top-btn {
     position: fixed;
     bottom: 100px;
@@ -242,31 +210,9 @@ body.light-mode .toggle-button {
     cursor: pointer;
     display: block;
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 .back-to-top-btn:hover {
     background-color: #0056b3;
 }
-
-
-/* Dark mode*/ 
-
-body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-}
-
-body.light-mode {
-    background-color: #ffffff;
-    color: #121212;
-}
-
-
-
-}
-
-/* Default Mode (if needed) */
-body {
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
-}
-
