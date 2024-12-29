@@ -184,3 +184,64 @@ footer p {
         font-size: 1rem;
     }
 }
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode header {
+    background: linear-gradient(135deg, #333, #444);
+}
+
+body.dark-mode nav {
+    background-color: #222;
+}
+
+body.dark-mode .profile-pic {
+    border: 5px solid #333;
+}
+
+body.dark-mode .section {
+    background-color: #222;
+    color: #ccc;
+}
+
+body.dark-mode .toggle-button {
+    background-color: #ff7e5f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+/* Button hover effect */
+body.dark-mode .toggle-button:hover {
+    background-color: #feb47b;
+}
+
+/* Light Mode Styles (by default) */
+.toggle-button {
+    background-color: #feb47b;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+/* Hover Effect for the Toggle Button */
+.toggle-button:hover {
+    background-color: #ff7e5f;
+}
+
