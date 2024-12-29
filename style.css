@@ -249,6 +249,8 @@ body.light-mode .toggle-button {
 }
 
 
+/* Dark mode*/ 
+
 body.dark-mode {
     background-color: #121212;
     color: #ffffff;
@@ -257,5 +259,14 @@ body.dark-mode {
 body.light-mode {
     background-color: #ffffff;
     color: #121212;
+}
+
+
+
+}
+
+/* Default Mode (if needed) */
+body {
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
