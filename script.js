@@ -14,7 +14,6 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
 
 
 
-/*
 // Toggle dark and light modes
 const toggleButton = document.querySelector('.toggle-button');
 toggleButton.addEventListener('click', () => {
@@ -25,7 +24,7 @@ toggleButton.addEventListener('click', () => {
     const isDarkMode = document.body.classList.contains('dark-mode');
     
     toggleButton.textContent = isDarkMode ? 'Toggle to Light Mode' : 'Toggle to Dark Mode';
-});  */
+});  
 
 // Select the toggle button
 const toggleButton = document.querySelector('.toggle-button');
