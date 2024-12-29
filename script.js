@@ -91,3 +91,28 @@ if (contactForm) {
 }
 
 }
+
+contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(contactForm);
+
+    fetch('submit_form.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert(data.message); // Show success message
+            contactForm.reset();
+        } else {
+            alert(data.errors.join("\n")); // Show errors
+        }
+    })
+    .catch(error => {
+        alert("An error occurred. Please try again later.");
+        console.error("Error:", error);
+    });
+});
+
