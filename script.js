@@ -81,4 +81,10 @@ window.onscroll = function () {
     }
 };
 
-// Scroll to the top when the button is cl
+// Scroll to the top when the button is clicked
+backToTopButton.addEventListener('click', function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Smooth scrolling
+    });
+});
