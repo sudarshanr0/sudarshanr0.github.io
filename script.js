@@ -11,6 +11,9 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
         });
     });
 });
+
+
+
 /*
 // Toggle dark and light modes
 const toggleButton = document.querySelector('.toggle-button');
@@ -44,6 +47,8 @@ toggleButton.addEventListener('click', () => {
     }
 });
 
+
+/*
 
 // Form Validation (For Contact Form)
 const contactForm = document.getElementById('contact-form');
@@ -90,7 +95,7 @@ if (contactForm) {
         contactForm.reset(); // Reset the form fields
     });
 }
-
+*/
 // Back to Top Button functionality
 const backToTopButton = document.getElementById('back-to-top');
 
