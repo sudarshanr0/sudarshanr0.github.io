@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f3f4f9;
-    color: #333;
+    background-color: #121212; /* Dark background */
+    color: #ccc;  /* Light gray text for dark mode */
     line-height: 1.6;
 }
 
@@ -22,12 +22,12 @@ body {
 
 /* Header Section */
 header {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Colorful gradient */
-    color: white;
+    background: linear-gradient(135deg, #333, #444); /* Dark gradient for dark theme */
+    color: #fff;
     padding: 50px 0;
     text-align: center;
     border-radius: 12px;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
 }
 
 .header-content {
@@ -43,10 +43,9 @@ header {
     width: 250px; /* Adjust the width as needed */
     height: 250px; /* Adjust the height as needed */
     object-fit: cover; /* Ensures the image maintains its aspect ratio */
-    border: 5px solid white; /* Optional: white border around the picture */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+    border: 5px solid #444; /* Dark border */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
 }
-
 
 .text-content {
     max-width: 500px;
@@ -55,7 +54,7 @@ header {
 header h1 {
     font-size: 3rem;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 header p {
@@ -65,11 +64,11 @@ header p {
 
 /* Navigation Bar */
 nav {
-    background-color: #333;
+    background-color: #222; /* Darker background for navigation */
     padding: 10px 0;
     margin-bottom: 40px;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 nav ul {
@@ -83,7 +82,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
@@ -142,15 +141,13 @@ ul li a:hover {
 
 /* Footer Section */
 footer {
-    background-color: #333;
+    background-color: #222; /* Dark background for footer */
     color: white;
     text-align: center;
     padding: 20px 0;
     margin-top: 40px;
     border-radius: 8px;
 }
-
-
 
 footer p {
     font-size: 1rem;
@@ -190,19 +187,17 @@ footer p {
         display: flex;
         flex-direction: column;
         align-items: center;
-    
-     }
-
+    }
 }
 
 /* Dark Mode Styles */
 body.dark-mode {
     background-color: #121212;
-    color: #ffffff;
+    color: #ccc;
 }
 
 body.dark-mode header {
-    background: linear-gradient(135deg, #333, #444);
+    background: linear-gradient(135deg, #333, #444); /* Darker header for dark mode */
 }
 
 body.dark-mode nav {
@@ -255,30 +250,15 @@ body.dark-mode .toggle-button:hover {
     background-color: #ff7e5f;
 }
 
-#form-feedback {
-    font-size: 1rem;
-    text-align: center;
-    margin-top: 15px;
-}
-
-ul li a, .toggle-button {
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-ul li a:focus, .toggle-button:focus {
-    outline: 3px solid #ff7e5f;
-}
-
-
 /* Style for the Back to Top button */
-/* Styling for the "Back to Top" button */
 .back-to-top-btn {
   position: fixed;
-  bottom: 1px;
-  right: 1px;
+  bottom: 20px;
+  right: 20px;
   background-color: #007BFF;
-  color: blue;
+  color: white;
   border: none;
-  padding: 5px 5px;
+  padding: 10px 15px;
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
