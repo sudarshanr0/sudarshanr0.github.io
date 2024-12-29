@@ -75,4 +75,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "errors" => ["Invalid request method."]
     ]);
 }
+// Get request
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Process the form submission
+    echo json_encode(["success" => true, "message" => "Form processed successfully."]);
+} else {
+    // Optional: Provide a default response for GET requests
+    echo json_encode([
+        "success" => false,
+        "errors" => ["This script only accepts POST requests."]
+    ]);
+}
+
+
 ?>
