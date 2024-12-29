@@ -1,3 +1,43 @@
+<script>
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    // Initialize theme based on user's preference or default to dark mode
+    const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme) {
+        body.classList.add(savedTheme); // Apply saved theme
+        themeToggle.textContent = savedTheme === 'dark-mode' ? 'Toggle to Light Mode' : 'Toggle to Dark Mode';
+    } else if (userPrefersDark) {
+        body.classList.add('dark-mode'); // Default to dark mode
+        themeToggle.textContent = 'Toggle to Light Mode';
+    } else {
+        body.classList.add('light-mode'); // Default to light mode
+        themeToggle.textContent = 'Toggle to Dark Mode';
+    }
+
+    themeToggle.addEventListener('click', () => {
+        if (body.classList.contains('dark-mode')) {
+            body.classList.remove('dark-mode');
+            body.classList.add('light-mode');
+            themeToggle.textContent = 'Toggle to Dark Mode';
+            localStorage.setItem('theme', 'light-mode'); // Save preference
+        } else {
+            body.classList.remove('light-mode');
+            body.classList.add('dark-mode');
+            themeToggle.textContent = 'Toggle to Light Mode';
+            localStorage.setItem('theme', 'dark-mode'); // Save preference
+        }
+    });
+</script>
+
+
+
+
+
+
 // Smooth Scrolling for navigation links
 document.querySelectorAll('nav ul li a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -12,23 +52,6 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
     });
 });
 
-// Toggle dark and light modes
-const toggleButton = document.querySelector('.toggle-button'); // Ensure this button exists in your HTML
-
-toggleButton.addEventListener('click', () => {
-    const body = document.body;
-
-    // Toggle the classes on the body
-    if (body.classList.contains('dark-mode')) {
-        body.classList.remove('dark-mode');
-        body.classList.add('light-mode');
-        toggleButton.textContent = 'Toggle to Dark Mode'; // Update button text
-    } else {
-        body.classList.remove('light-mode');
-        body.classList.add('dark-mode');
-        toggleButton.textContent = 'Toggle to Light Mode'; // Update button text
-    }
-});
 
 // Back to Top Button functionality
 const backToTopButton = document.getElementById('back-to-top'); // Ensure the button exists
