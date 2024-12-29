@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
+    background-color: #f3f4f9;
     color: #333;
     line-height: 1.6;
 }
@@ -20,19 +20,40 @@ body {
     padding: 20px;
 }
 
-/* Header section */
+/* Header Section */
 header {
-    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Colorful gradient */
     color: white;
-    padding: 60px 0;
+    padding: 50px 0;
     text-align: center;
-    border-radius: 8px;
-    margin-bottom: 50px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.text-content {
+    max-width: 500px;
 }
 
 header h1 {
     font-size: 3rem;
     margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 header p {
@@ -40,12 +61,13 @@ header p {
     margin-bottom: 20px;
 }
 
-/* Navigation bar */
+/* Navigation Bar */
 nav {
     background-color: #333;
     padding: 10px 0;
     margin-bottom: 40px;
-    border-radius: 6px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -68,7 +90,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #2575fc;
+    background-color: #ff7e5f; /* Color on hover */
     border-radius: 4px;
     transform: scale(1.05);
 }
@@ -76,19 +98,18 @@ nav ul li a:hover {
 /* Section Styles */
 .section {
     margin-bottom: 60px;
+    text-align: center;
 }
 
 section h2 {
     font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    color: #ff7e5f; /* Accent color */
 }
 
 section p {
     font-size: 1.2rem;
     line-height: 1.8;
-    text-align: center;
-    margin-bottom: 20px;
 }
 
 /* Work Section */
@@ -98,20 +119,23 @@ ul {
 }
 
 ul li {
-    margin: 10px 0;
-    text-align: center;
+    margin: 20px 0;
 }
 
 ul li a {
     color: #333;
     font-size: 1.2rem;
     text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: #feb47b;
     transition: all 0.3s ease;
 }
 
 ul li a:hover {
-    color: #2575fc;
-    text-decoration: underline;
+    background-color: #ff7e5f;
+    color: white;
+    transform: scale(1.05);
 }
 
 /* Footer Section */
@@ -121,7 +145,7 @@ footer {
     text-align: center;
     padding: 20px 0;
     margin-top: 40px;
-    border-radius: 6px;
+    border-radius: 8px;
 }
 
 footer p {
