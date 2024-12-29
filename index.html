@@ -173,9 +173,28 @@ Beyond education and research, I’m an <b>author of spiritual and self-help boo
     </footer>
 
     <!-- Back to the top button -->
-<button id="back-to-top" class="back-to-top-btn">↑ Back to Top</button>
 
+  <button id="backToTopBtn" class="back-to-top-btn" onclick="scrollToTop()">↑ Back to Top</button>
 
+  <script>
+    // Function to scroll the page back to the top
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'  // Smooth scroll effect
+      });
+    }
+
+    // You can keep the scroll functionality if you want to hide the button when at the top
+    window.onscroll = function() {
+      var button = document.getElementById("backToTopBtn");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        button.style.display = "block";  // Show button if scrolled down
+      } else {
+        button.style.display = "block";  // Keep button always visible
+      }
+    };
+  </script>
     <script src="script.js"></script>
 </body>
 </html>
