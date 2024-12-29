@@ -12,16 +12,18 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
     });
 });
 
-// Dark Mode Toggle
-const toggleButton = document.createElement('button');
-toggleButton.textContent = 'Toggle Dark Mode';
-toggleButton.classList.add('toggle-button');
-document.body.appendChild(toggleButton);
-
+// Toggle dark and light modes
+const toggleButton = document.querySelector('.toggle-button');
 toggleButton.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-    toggleButton.classList.toggle('dark-mode');
+    document.body.classList.toggle('light-mode');
+    const currentMode = document.body.classList.contains('dark-mode') ? 'Dark' : 'Light';
+    toggleButton.textContent = `Toggle ${currentMode} Mode`; // Update button text
 });
+
+
+
+
 
 // Form Validation (For Contact Form)
 const contactForm = document.getElementById('contact-form');
