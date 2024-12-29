@@ -231,7 +231,7 @@ body.light-mode .toggle-button {
 /* Style for the Back to Top button */
 .back-to-top-btn {
     position: fixed;
-    bottom: 20px;
+    bottom: 50px;
     right: 20px;
     background-color: #007BFF;
     color: white;
