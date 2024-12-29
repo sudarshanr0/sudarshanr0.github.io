@@ -247,3 +247,15 @@ body.light-mode .toggle-button {
 .back-to-top-btn:hover {
     background-color: #0056b3;
 }
+
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #121212;
+}
+
