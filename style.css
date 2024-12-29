@@ -269,3 +269,28 @@ ul li a:focus, .toggle-button:focus {
 }
 
 
+/* Style for the Back to Top button */
+.back-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff7e5f; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    transition: all 0.3s ease;
+}
+
+.back-to-top-btn:hover {
+    background-color: #feb47b; /* Button hover color */
+    transform: scale(1.1);
+}
+
+/* When the page is scrolled down, show the button */
+.show-btn {
+    display: block;
+}
