@@ -12,91 +12,26 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
     });
 });
 
-
-
 // Toggle dark and light modes
-const toggleButton = document.querySelector('.toggle-button');
+const toggleButton = document.querySelector('.toggle-button'); // Ensure this button exists in your HTML
+
 toggleButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    document.body.classList.toggle('light-mode');
-
-    // Update button text based on current mode
-    const isDarkMode = document.body.classList.contains('dark-mode');
-    
-    toggleButton.textContent = isDarkMode ? 'Toggle to Light Mode' : 'Toggle to Dark Mode';
-});  
-
-// Select the toggle button
-const toggleButton = document.querySelector('.toggle-button');
-
-// Add event listener for the toggle functionality
-toggleButton.addEventListener('click', () => {
-    // Toggle the classes on the body element
     const body = document.body;
 
-    // Check current mode and switch
+    // Toggle the classes on the body
     if (body.classList.contains('dark-mode')) {
         body.classList.remove('dark-mode');
         body.classList.add('light-mode');
-        toggleButton.textContent = 'Toggle to Dark Mode';
+        toggleButton.textContent = 'Toggle to Dark Mode'; // Update button text
     } else {
         body.classList.remove('light-mode');
         body.classList.add('dark-mode');
-        toggleButton.textContent = 'Toggle to Light Mode';
+        toggleButton.textContent = 'Toggle to Light Mode'; // Update button text
     }
 });
 
-
-/*
-
-// Form Validation (For Contact Form)
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-        e.preventDefault(); // Prevent form from submitting
-
-        // Get form fields
-        const emailInput = document.getElementById('email');
-        const messageInput = document.getElementById('message');
-        const nameInput = document.getElementById('name'); // Assuming a name field exists
-        const subjectInput = document.getElementById('subject'); // Assuming a subject field exists
-
-        // Validation Patterns
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        // Validate Fields
-        let errors = [];
-
-        if (!nameInput.value.trim()) {
-            errors.push("Name is required.");
-        }
-
-        if (!emailInput.value.trim() || !emailPattern.test(emailInput.value)) {
-            errors.push("A valid email address is required.");
-        }
-
-        if (!subjectInput.value.trim()) {
-            errors.push("Subject is required.");
-        }
-
-        if (!messageInput.value.trim()) {
-            errors.push("Message cannot be empty.");
-        }
-
-        if (errors.length > 0) {
-            // Display errors
-            alert(errors.join("\n"));
-            return;
-        }
-
-        // Simulate form submission
-        alert("Thank you for reaching out! Your message has been sent.");
-        contactForm.reset(); // Reset the form fields
-    });
-}
-*/
 // Back to Top Button functionality
-const backToTopButton = document.getElementById('back-to-top');
+const backToTopButton = document.getElementById('back-to-top'); // Ensure the button exists
 
 // Show the button when the user scrolls down
 window.onscroll = function () {
@@ -108,9 +43,4 @@ window.onscroll = function () {
 };
 
 // Scroll to the top when the button is clicked
-backToTopButton.addEventListener('click', function () {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth' // Smooth scrolling
-    });
-});
+backToTopButton.add
