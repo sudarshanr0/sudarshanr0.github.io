@@ -41,4 +41,53 @@ if (contactForm) {
             contactForm.reset();
         }
     });
+
+
+    // Form Validation and Submission
+const contactForm = document.getElementById('contact-form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent form from submitting
+
+        // Get form fields
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
+        const nameInput = document.getElementById('name'); // Assuming a name field exists
+        const subjectInput = document.getElementById('subject'); // Assuming a subject field exists
+
+        // Validation Patterns
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Validate Fields
+        let errors = [];
+
+        if (!nameInput.value.trim()) {
+            errors.push("Name is required.");
+        }
+
+        if (!emailInput.value.trim() || !emailPattern.test(emailInput.value)) {
+            errors.push("A valid email address is required.");
+        }
+
+        if (!subjectInput.value.trim()) {
+            errors.push("Subject is required.");
+        }
+
+        if (!messageInput.value.trim()) {
+            errors.push("Message cannot be empty.");
+        }
+
+        if (errors.length > 0) {
+            // Display errors
+            alert(errors.join("\n"));
+            return;
+        }
+
+        // Simulate form submission
+        alert("Thank you for reaching out! Your message has been sent.");
+        contactForm.reset(); // Reset the form fields
+    });
+}
+
 }
