@@ -121,7 +121,7 @@ const backToTopButton = document.getElementById('back-to-top');
 
 // Show the button when the user scrolls down
 window.onscroll = function () {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 200) {
         backToTopButton.classList.add('show-btn');
     } else {
         backToTopButton.classList.remove('show-btn');
@@ -130,7 +130,7 @@ window.onscroll = function () {
 
 // Scroll to the top when the button is clicked
 backToTopButton.addEventListener('click', function () {
-    window.scrollTo({
+    window.scrollToTop(){
         top: 0,
         behavior: 'smooth' // Smooth scrolling
     });
