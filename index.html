@@ -204,5 +204,30 @@ Beyond education and research, I’m an <b>author of spiritual and self-help boo
     };
   </script>
     <script src="script.js"></script>
+
+
+      <!-- Toggle Light Mode Button -->
+    <button id="themeToggle" class="toggle-button">Toggle to Light Mode</button>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            // Toggle the dark-mode and light-mode classes on the body
+            if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                themeToggle.textContent = 'Toggle to Dark Mode';
+            } else {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                themeToggle.textContent = 'Toggle to Light Mode';
+            }
+        });
+
+        // Initialize theme to dark mode
+        body.classList.add('dark-mode');
 </body>
 </html>
