@@ -270,27 +270,22 @@ ul li a:focus, .toggle-button:focus {
 
 
 /* Style for the Back to Top button */
+/* Styling for the "Back to Top" button */
 .back-to-top-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #ff7e5f; /* Button color */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none; /* Initially hidden */
-    transition: all 0.3s ease;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #007BFF;
+  color: blue;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block; /* Always visible */
+  z-index: 1000;
 }
 
 .back-to-top-btn:hover {
-    background-color: #feb47b; /* Button hover color */
-    transform: scale(1.1);
-}
-
-/* When the page is scrolled down, show the button */
-.show-btn {
-    display: block;
+  background-color: #0056b3;
 }
