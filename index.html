@@ -187,42 +187,32 @@ Beyond education and research, I’m an <b>author of spiritual and self-help boo
         </div>
     </footer>
 
-    <!-- Back to the top button -->
+    <!-- Back to the Top Button -->
+    <button id="backToTopBtn" class="back-to-top-btn" onclick="scrollToTop()">↑ Back to Top</button>
 
-  <button id="backToTopBtn" class="back-to-top-btn" onclick="scrollToTop()">↑ Back to Top</button>
-
-  <script>
-    // Function to scroll the page back to the top
-    function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'  // Smooth scroll effect
-      });
-    }
-
-    // You can keep the scroll functionality if you want to hide the button when at the top
-    window.onscroll = function() {
-      var button = document.getElementById("backToTopBtn");
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        button.style.display = "block";  // Show button if scrolled down
-      } else {
-        button.style.display = "block";  // Keep button always visible
-      }
-    };
-  </script>
-
-
-
-      <!-- Toggle Light Mode Button -->
-    <button id="themeToggle" class="toggle-button">Toggle to Light Mode</button>
-
+    <!-- Scripts -->
     <script>
+        // Smooth Scrolling for navigation links
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 60,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
         // Theme toggle functionality
         const themeToggle = document.getElementById('themeToggle');
         const body = document.body;
 
         themeToggle.addEventListener('click', () => {
-            // Toggle the dark-mode and light-mode classes on the body
             if (body.classList.contains('dark-mode')) {
                 body.classList.remove('dark-mode');
                 body.classList.add('light-mode');
@@ -234,14 +224,33 @@ Beyond education and research, I’m an <b>author of spiritual and self-help boo
             }
         });
 
-        // Initialize theme to dark mode
-        body.classList.add('dark-mode');
-        </script>
+        // Initialize theme based on user's preference (default to dark mode)
+        const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (userPrefersDark) {
+            body.classList.add('dark-mode');
+            themeToggle.textContent = 'Toggle to Light Mode';
+        } else {
+            body.classList.add('light-mode');
+            themeToggle.textContent = 'Toggle to Dark Mode';
+        }
 
-        <script src="script.js"></script> 
+        // Back to Top Button functionality
+        const backToTopBtn = document.getElementById('backToTopBtn');
 
+        window.onscroll = function () {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        };
 
-    <button class="toggle-button">Toggle to Light Mode</button>
-
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 </html>
