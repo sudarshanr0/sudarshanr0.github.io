@@ -29,27 +29,6 @@ if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
         e.preventDefault(); // Prevent form from submitting
 
-        const emailInput = document.getElementById('email');
-        const messageInput = document.getElementById('message');
-        
-        // Simple validation
-        if (emailInput.value === "" || messageInput.value === "") {
-            alert("Please fill in both the email and message fields.");
-        } else {
-            alert("Form submitted successfully!");
-            // Reset form
-            contactForm.reset();
-        }
-    });
-
-
-    // Form Validation and Submission
-const contactForm = document.getElementById('contact-form');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-        e.preventDefault(); // Prevent form from submitting
-
         // Get form fields
         const emailInput = document.getElementById('email');
         const messageInput = document.getElementById('message');
@@ -90,33 +69,7 @@ if (contactForm) {
     });
 }
 
-}
-
-contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const formData = new FormData(contactForm);
-
-    fetch('submit_form.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            alert(data.message); // Show success message
-            contactForm.reset();
-        } else {
-            alert(data.errors.join("\n")); // Show errors
-        }
-    })
-    .catch(error => {
-        alert("An error occurred. Please try again later.");
-        console.error("Error:", error);
-    });
-});
-
-// Get the button
+// Back to Top Button functionality
 const backToTopButton = document.getElementById('back-to-top');
 
 // Show the button when the user scrolls down
@@ -130,7 +83,7 @@ window.onscroll = function () {
 
 // Scroll to the top when the button is clicked
 backToTopButton.addEventListener('click', function () {
-    window.scrollToTop(){
+    window.scrollTo({
         top: 0,
         behavior: 'smooth' // Smooth scrolling
     });
