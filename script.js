@@ -1,4 +1,4 @@
-<script>
+
     // Theme toggle functionality
     const themeToggle = document.getElementById('themeToggle');
     const body = document.body;
@@ -31,7 +31,7 @@
             localStorage.setItem('theme', 'dark-mode'); // Save preference
         }
     });
-</script>
+
 
 
 
