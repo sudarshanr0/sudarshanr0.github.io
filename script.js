@@ -8,33 +8,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (savedTheme) {
         body.classList.add(savedTheme);
-        themeToggle.textContent = savedTheme === "dark-mode" ? "Toggle to Light Mode" : "Toggle to Dark Mode";
+        updateThemeToggleText(savedTheme);
     } else if (userPrefersDark) {
         body.classList.add("dark-mode");
-        themeToggle.textContent = "Toggle to Light Mode";
+        updateThemeToggleText("dark-mode");
     } else {
         body.classList.add("light-mode");
-        themeToggle.textContent = "Toggle to Dark Mode";
+        updateThemeToggleText("light-mode");
     }
 
     // Toggle theme on button click
     themeToggle.addEventListener("click", () => {
-        if (body.classList.contains("dark-mode")) {
-            body.classList.replace("dark-mode", "light-mode");
-            themeToggle.textContent = "Toggle to Dark Mode";
-            localStorage.setItem("theme", "light-mode");
-        } else {
-            body.classList.replace("light-mode", "dark-mode");
-            themeToggle.textContent = "Toggle to Light Mode";
-            localStorage.setItem("theme", "dark-mode");
-        }
+        const newTheme = body.classList.contains("dark-mode") ? "light-mode" : "dark-mode";
+        body.className = newTheme; // Clear and add only the new theme class
+        updateThemeToggleText(newTheme);
+        localStorage.setItem("theme", newTheme);
     });
+
+    function updateThemeToggleText(theme) {
+        themeToggle.textContent = theme === "dark-mode" ? "Toggle to Light Mode" : "Toggle to Dark Mode";
+    }
 });
-
-
-
-
-
 
 // Smooth Scrolling for navigation links
 document.querySelectorAll('nav ul li a').forEach(anchor => {
@@ -43,25 +37,39 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
         const targetId = this.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
 
-        window.scrollTo({
-            top: targetElement.offsetTop - 60, // Adjust scroll position (for fixed nav bar)
-            behavior: 'smooth'
-        });
+        if (targetElement) {
+            const offset = targetElement.offsetTop - 60; // Adjust scroll position (for fixed nav bar)
+            window.scrollTo({
+                top: offset,
+                behavior: 'smooth'
+            });
+        }
     });
 });
 
-
 // Back to Top Button functionality
-const backToTopButton = document.getElementById('back-to-top'); // Ensure the button exists
+const backToTopButton = document.getElementById('back-to-top');
 
-// Show the button when the user scrolls down
-window.onscroll = function () {
-    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 200) {
-        backToTopButton.classList.add('show-btn');
-    } else {
-        backToTopButton.classList.remove('show-btn');
-    }
-};
+// Debounce for better performance during scroll
+let scrollTimeout;
+window.addEventListener("scroll", () => {
+    if (scrollTimeout) clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop > 200) {
+            backToTopButton.classList.add('show-btn');
+        } else {
+            backToTopButton.classList.remove('show-btn');
+        }
+    }, 100); // Add a small delay to reduce excessive calls
+});
 
 // Scroll to the top when the button is clicked
-backToTopButton.add
+if (backToTopButton) {
+    backToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
