@@ -7,10 +7,11 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #121212; /* Default: Dark Mode */
+    background-color: #121212;
     color: #ccc;
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px; /* Base font size for scaling */
 }
 
 /* Container */
@@ -25,7 +26,7 @@ body {
 header {
     background: linear-gradient(135deg, #333, #444);
     color: #fff;
-    padding: 50px 0;
+    padding: 30px 20px;
     text-align: center;
     border-radius: 12px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
@@ -33,35 +34,36 @@ header {
 
 .header-content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
+    text-align: center;
 }
 
 .profile-pic {
     border-radius: 50%;
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
-    border: 5px solid #444;
+    border: 3px solid #444;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 10px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 20px;
 }
 
 /* Navigation */
 nav {
     background-color: #222;
-    padding: 10px 0;
+    padding: 10px;
     margin-bottom: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -69,19 +71,20 @@ nav {
 
 nav ul {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     list-style-type: none;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 5px 10px;
 }
 
 nav ul li a {
     color: #f74343;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 10px 15px;
     transition: all 0.3s ease;
 }
@@ -94,18 +97,19 @@ nav ul li a:hover {
 
 /* Section */
 .section {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     text-align: center;
+    padding: 0 10px;
 }
 
 section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2rem;
+    margin-bottom: 15px;
     color: #f74343;
 }
 
 section p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.8;
 }
 
@@ -116,14 +120,14 @@ ul {
 }
 
 ul li {
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 ul li a {
     color: #333;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 8px 15px;
     border-radius: 6px;
     background-color: #feb47b;
     transition: all 0.3s ease;
@@ -140,13 +144,13 @@ footer {
     background-color: #222;
     color: white;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
+    padding: 15px 0;
+    margin-top: 30px;
     border-radius: 8px;
 }
 
 footer p {
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 /* Light Mode */
@@ -164,7 +168,7 @@ body.light-mode nav {
 }
 
 body.light-mode .profile-pic {
-    border: 5px solid #f3f4f9;
+    border: 3px solid #f3f4f9;
 }
 
 body.light-mode .section {
@@ -177,13 +181,13 @@ body.light-mode .section {
     background-color: #ff7e5f;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 8px 15px;
+    font-size: 0.9rem;
     cursor: pointer;
     border-radius: 5px;
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 20px;
+    right: 20px;
     transition: all 0.3s ease;
 }
 
@@ -191,23 +195,18 @@ body.light-mode .section {
     background-color: #feb47b;
 }
 
-
-
-
-
 /* Back to Top Button */
 .back-to-top-btn {
     position: fixed;
-    bottom: 100px;
+    bottom: 80px;
     right: 20px;
     background-color: #007BFF;
     color: white;
     border: none;
-    padding: 10px 15px;
-    font-size: 16px;
+    padding: 8px 12px;
+    font-size: 14px;
     border-radius: 5px;
     cursor: pointer;
-    display: block;
     z-index: 1000;
     transition: all 0.3s ease;
 }
@@ -219,4 +218,61 @@ body.light-mode .back-to-top-btn {
 
 .back-to-top-btn:hover {
     background-color: #0056b3;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    section p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .back-to-top-btn {
+        bottom: 50px;
+        right: 10px;
+    }
 }
