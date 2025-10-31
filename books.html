@@ -5,35 +5,167 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Books and Publications">
     <title>Books</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <div class="container">
-            <h1>My Books and Publications</h1>
+<body class="books-page">
+    <header class="books-hero">
+        <div class="container books-hero__content">
+            <div class="books-hero__copy">
+                <a class="books-hero__back" href="index.html">&larr; Back to home</a>
+                <h1>Books &amp; Publications</h1>
+                <p class="books-hero__intro">A growing collection of works that celebrate Samskrta heritage, language, and lived experiences. Explore highlighted releases, sample a preview, and find the best place to grab your copy.</p>
+                <div class="books-hero__badge-tray" aria-label="Signature storytelling themes">
+                    <span class="books-hero__badge">Samskrta pedagogy</span>
+                    <span class="books-hero__badge">Mindful leadership</span>
+                    <span class="books-hero__badge">Community wisdom</span>
+                </div>
+            </div>
+            <aside class="books-hero__panel" aria-label="What you'll find">
+                <h2>What you'll find inside</h2>
+                <ul>
+                    <li>Curated previews that spotlight the voice, design, and intent of each title.</li>
+                    <li>Trusted storefront links and free e-resources to continue your exploration.</li>
+                    <li>Reader personas that help you match the right companion for your journey.</li>
+                </ul>
+                <p class="books-hero__panel-note">Every project is crafted to make Samskrta approachable for modern seekers and lifelong learners alike.</p>
+            </aside>
         </div>
     </header>
 
-    <section id="books" class="section">
-        <div class="container">
-            <h2>Books and Publications</h2>
-            <ul>
-                <li><strong>Panchaashat peetha rahasyam:</strong> The 50 Tantrik goddesses of the Samskrta alphabet, Transliteration from Sanskrit to Kannada <a href="https://sites.google.com/view/panchaashatpeetham/" target="_blank">E-Book</a> </li>
-                <li><strong>Nava Vaibhavam:</strong> Treasure trove of Unsung uncommon words in Samskrtam <a href="https://amzn.in/d/7PyUqZb" target="_blank">Buy on Amazon</a> ASIN: B0D1WBP8JP</li> 
-                <li><strong>Vaamshii:</strong> A pronunciation and Devanagari script aid to beginners - <a href="https://www.amazon.in/dp/B0DQDT8Y3X" target="_blank">Buy on Amazon</a> (ISBN: 9798303876767)</li>
-                <li><strong>Lalleshwari:</strong> Arcane poems of the Mystic Enchantress of Kaashmeera - <a href="https://www.ziffybees.com/product/lalleshwari-vaaks-arcane-poems-of-the-mystic-enchantress-of-kaashmeera/" target="_blank">Buy on ZiffyBees</a> (ISBN: 9798303884595)</li>
-            </ul>
-        </div>
-    </section>
+    <main>
+        <section id="featured-books" class="section">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>Featured titles</h2>
+                    <p>Each project is crafted to make Samskrta more approachable &mdash; whether you are just beginning your journey or deepening a lifelong devotion.</p>
+                </div>
+                <div class="book-grid">
+                    <article class="book-card">
+                        <div class="book-card__badge">Sacred soundscapes</div>
+                        <figure class="book-card__media">
+                            <img src="assets/books/panchaashat-preview.svg" alt="Illustrated preview from Panchaashat Peetha Rahasyam" loading="lazy">
+                        </figure>
+                        <h3>Panchaashat Peetha Rahasyam</h3>
+                        <p class="book-card__tagline">Uncover the fifty Tantrik goddesses that guard the Samskrta alphabet in this immersive bilingual exploration.</p>
+                        <div class="book-card__preview">
+                            <h4>Peek inside</h4>
+                            <p>Trace every peetham through transliterated verses, curated illustrations, and contextual notes that bridge Sanskrit and Kannada traditions.</p>
+                        </div>
+                        <dl class="book-card__meta">
+                            <div>
+                                <dt>Format</dt>
+                                <dd>Interactive e-book (Sanskrit &amp; Kannada)</dd>
+                            </div>
+                            <div>
+                                <dt>Perfect for</dt>
+                                <dd>Devotees, cultural learners, temple study circles</dd>
+                            </div>
+                        </dl>
+                        <div class="book-card__actions">
+                            <a class="cta-button" href="https://sites.google.com/view/panchaashatpeetham/" target="_blank" rel="noopener">Read the e-book</a>
+                        </div>
+                    </article>
 
-    <!-- Link back to the main page -->
-    <section id="back-link" class="section">
-        <div class="container">
-            <p><a href="index.html">Back to Home</a></p> <!-- Link to the main index.html page -->
-        </div>
-    </section>
+                    <article class="book-card">
+                        <div class="book-card__badge">Wordsmith essentials</div>
+                        <figure class="book-card__media">
+                            <img src="assets/books/nava-vaibhavam-preview.svg" alt="Vocabulary preview spread from Nava Vaibhavam" loading="lazy">
+                        </figure>
+                        <h3>Nava Vaibhavam</h3>
+                        <p class="book-card__tagline">A treasure trove of rare Samskrta words brought to life with modern references and mnemonic cues.</p>
+                        <div class="book-card__preview">
+                            <h4>Peek inside</h4>
+                            <ul>
+                                <li>50+ curated entries with roots, meanings, and poetic usage.</li>
+                                <li>Memory hooks that help enthusiasts retain nuanced vocabulary.</li>
+                                <li>Bonus sections featuring community-sourced anecdotes.</li>
+                            </ul>
+                        </div>
+                        <dl class="book-card__meta">
+                            <div>
+                                <dt>Available via</dt>
+                                <dd>Amazon Kindle</dd>
+                            </div>
+                            <div>
+                                <dt>ASIN</dt>
+                                <dd>B0D1WBP8JP</dd>
+                            </div>
+                        </dl>
+                        <div class="book-card__actions">
+                            <a class="cta-button" href="https://amzn.in/d/7PyUqZb" target="_blank" rel="noopener">Buy on Amazon</a>
+                        </div>
+                    </article>
 
-    <footer>
+                    <article class="book-card">
+                        <div class="book-card__badge">Pronunciation partner</div>
+                        <figure class="book-card__media">
+                            <img src="assets/books/vaamshii-preview.svg" alt="Practice drills preview from Vaamshii" loading="lazy">
+                        </figure>
+                        <h3>Vaamshii</h3>
+                        <p class="book-card__tagline">Your friendly companion for getting started with Devanagari script and Samskrta phonetics.</p>
+                        <div class="book-card__preview">
+                            <h4>Peek inside</h4>
+                            <p>Follow along with guided mouth diagrams, QR-linked audio, and bite-sized drills that build muscle memory in minutes a day.</p>
+                        </div>
+                        <dl class="book-card__meta">
+                            <div>
+                                <dt>Available via</dt>
+                                <dd>Amazon Print &amp; Kindle</dd>
+                            </div>
+                            <div>
+                                <dt>ISBN</dt>
+                                <dd>9798303876767</dd>
+                            </div>
+                        </dl>
+                        <div class="book-card__actions">
+                            <a class="cta-button" href="https://www.amazon.in/dp/B0DQDT8Y3X" target="_blank" rel="noopener">Shop the guide</a>
+                        </div>
+                    </article>
+
+                    <article class="book-card">
+                        <div class="book-card__badge">Mystic poetry</div>
+                        <figure class="book-card__media">
+                            <img src="assets/books/lalleshwari-preview.svg" alt="Poetic excerpt preview from Lalleshwari" loading="lazy">
+                        </figure>
+                        <h3>Lalleshwari</h3>
+                        <p class="book-card__tagline">Arcane verses from Kashmir's revered mystic, presented with transliteration and meditative commentary.</p>
+                        <div class="book-card__preview">
+                            <h4>Peek inside</h4>
+                            <p>Encounter Lalla's voice through layered annotations, guided reflection prompts, and curated references for the modern seeker.</p>
+                        </div>
+                        <dl class="book-card__meta">
+                            <div>
+                                <dt>Available via</dt>
+                                <dd>ZiffyBees Print Edition</dd>
+                            </div>
+                            <div>
+                                <dt>ISBN</dt>
+                                <dd>9798303884595</dd>
+                            </div>
+                        </dl>
+                        <div class="book-card__actions">
+                            <a class="cta-button" href="https://www.ziffybees.com/product/lalleshwari-vaaks-arcane-poems-of-the-mystic-enchantress-of-kaashmeera/" target="_blank" rel="noopener">Order the book</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section books-extras">
+            <div class="container">
+                <div class="section-card books-extras__card">
+                    <h2>Looking for something specific?</h2>
+                    <p>If you are curating study circles, designing workshops, or exploring translations, I would love to collaborate. Share a note with the focus you have in mind and I'll craft a tailored resource kit.</p>
+                    <a class="cta-button ghost" href="mailto:sudarshan.ravi@gmail.com">Request a custom bundle</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer">
         <div class="container">
             <p>&copy; 2024 Sudarshan Ravi. All rights reserved.</p>
         </div>
