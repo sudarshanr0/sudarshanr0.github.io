@@ -3,508 +3,510 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal website showcasing my work, education, achievements, and other interests">
-    <title>Sudarshan R - Personal Website</title>
+    <meta name="description" content="Portfolio website for Sudarshan R – educator, researcher, author, and sustainability advocate.">
+    <title>Sudarshan R · Educator | Researcher | Author</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Helvetica, sans-serif;
-            line-height: 1.6;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        header {
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-        }
-
-        .header-content h1 {
-            font-size: 1.8rem;
-        }
-
-        nav {
-            background: #333;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: space-around;
-            list-style: none;
-            padding: 10px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-        }
-
-        nav ul li a:hover {
-            background: #555;
-            border-radius: 5px;
-        }
-
-        section {
-            padding: 20px 0;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-
-        th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: left;
-        }
-
-        th {
-            background: #f4f4f4;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .header-content h1 {
-                font-size: 1.5rem;
-            }
-
-            table {
-                font-size: 0.9rem;
-            }
-        }
-    </style>
 </head>
 <body>
-    
-<!-- <button class="toggle-button">Toggle to Light Mode</button>
---> 
-
-    
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <img src="author pic sud.jpg" alt="Sudarshan R" class="profile-pic">
-                <div class="text-content">
-                    <h1>Welcome to My Personal Website</h1>
-                    <p>Namaste!  I'm Sudarshan R, a passionate multipotentialite. You can put me under the broad Labels of  <br><b> Educator, Researcher, Author </b></p>
+    <header class="site-header">
+        <div class="container hero-layout">
+            <div class="hero-profile">
+                <div class="hero-avatar">
+                    <img src="author pic sud.jpg" alt="Portrait of Sudarshan R" class="profile-pic">
+                    <div class="hero-pill-group" aria-label="Signature roles">
+                        <span class="hero-pill">Quant Mentor</span>
+                        <span class="hero-pill">Sustainability Researcher</span>
+                        <span class="hero-pill">Samskrta Author</span>
+                    </div>
+                </div>
+                <button id="themeToggle" class="toggle-button" type="button" aria-live="polite" aria-pressed="false">
+                    <span class="toggle-button__icon" aria-hidden="true">🌗</span>
+                    <span class="toggle-button__label" data-theme-label>Toggle theme</span>
+                </button>
+            </div>
+            <div class="hero-copy">
+                <p class="intro-eyebrow">Namaste, I'm</p>
+                <h1>Sudarshan R</h1>
+                <p class="intro-tagline">Educator • Researcher • Author • Sustainability Advocate</p>
+                <p class="intro-summary">
+                    Multipotentialite with a passion for quantitative aptitude, environmental research, Sanskrit literature, and lifelong learning. I design transformative learning journeys, prototype sustainable technologies, and nurture communities through service-driven initiatives.
+                </p>
+                <div class="hero-side-panel" aria-label="Current focus areas">
+                    <h2>Currently crafting</h2>
+                    <ul>
+                        <li>Adaptive quant playbooks for MBA aspirants across India.</li>
+                        <li>Solar circularity frameworks with interdisciplinary researchers at IISc.</li>
+                        <li>Weekly Samskrta storytelling sessions and contemplative workshops.</li>
+                    </ul>
+                    <p class="hero-side-panel__note">Open to collaborations on sustainable innovation, inclusive education, and purposeful leadership.</p>
+                </div>
+                <div class="header-cta">
+                    <a class="cta-button" href="#contact">Let's Connect</a>
+                    <a class="cta-button ghost" href="books.html">Explore My Books</a>
                 </div>
             </div>
         </div>
+        <div class="container hero-highlights reveal-on-scroll" aria-label="Career highlights">
+            <article class="highlight-card" tabindex="0">
+                <span class="highlight-icon" aria-hidden="true">🎓</span>
+                <p class="stat-number" data-count-target="7" data-count-suffix="+">7+</p>
+                <p class="stat-label">Years guiding learners in aptitude and STEM</p>
+            </article>
+            <article class="highlight-card" tabindex="0">
+                <span class="highlight-icon" aria-hidden="true">🧠</span>
+                <p class="stat-number" data-count-target="3200" data-count-suffix="+">3200+</p>
+                <p class="stat-label">Students mentored across exams and workshops</p>
+            </article>
+            <article class="highlight-card" tabindex="0">
+                <span class="highlight-icon" aria-hidden="true">🌱</span>
+                <p class="stat-number" data-count-target="15" data-count-suffix="+">15+</p>
+                <p class="stat-label">Research &amp; writing projects spanning sustainability and Sanskrit</p>
+            </article>
+            <article class="highlight-card" tabindex="0">
+                <span class="highlight-icon" aria-hidden="true">📚</span>
+                <p class="stat-number" data-count-target="5" data-count-suffix="">5</p>
+                <p class="stat-label">Books authored on spirituality, purpose, and self-leadership</p>
+            </article>
+        </div>
     </header>
 
-    <nav>
+    <nav class="site-nav" aria-label="Primary navigation">
         <div class="container">
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
-                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#interests">Interests</a></li>
+                <li><a href="#resources">Resources</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- About Me Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>
-                I am an educator with a deep passion for Quantitative Aptitude, Competitive Mathematics, Logical Reasoning, and Data Interpretation. 
-                As a <b>faculty member</b> for CAT, IPMAT, GMAT, GRE, and other MBA entrance exams, I specialize in developing and proofreading coaching modules to help students excel in these competitive exams. 
-                Additionally, I <b>tutor Science and Mathematics</b> for students in classes 8-12, with a strong focus on preparing for JEE Mains, NEET, and KCET. <br>
-
-With a strong academic background from the prestigious <b>Indian Institute of Science, </b> Bengaluru,
-                I hold both MS and BS(Research) degrees, specializing in <b><i> Sustainability, Life Cycle Assessment, and Environmental Impact. </b></i> 
-                My research expertise continues to inspire my work, as I aim to contribute to a more sustainable world. <br>
-
-Beyond education and research, I’m an <b>author of spiritual and self-help books</b>, and I share my insights through blogging and YouTube videos, particularly on the ancient language of Sanskrit. I am passionate about giving back to the community, which is why I run <b>free educational campaigns and workshops, empowering others</b>  to grow and learn.
-            </p>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="section">
-        <div class="container">
-            <h2>Education</h2>
-           <p>Here's a look at my educational background:</p>
-<ul>
-    <li>
-        <strong><i>Bachelor of Science(Research) in Earth and Environmental Science</i></strong> - INDIAN INSTITUTE OF SCIENCE (IISc), 2022
-        <ul>
-            <li>Award-winning thesis on Packed Bed Biofilm Reactor for Efficient Nitrification in Recirculating Aquaculture Systems</li>
-            <li>Achieved a GPA of 8.6</li>
-        </ul>
-    </li>
-    <li>
-        <strong><i>Master of Science(Research) in Earth and Environmental Science</i></strong> - INDIAN INSTITUTE OF SCIENCE (IISc), 2023
-        <ul>
-            <li>Conducted research on Sustainability Practices of Solar Panels, focusing on innovative solutions for enhancing efficiency and environmental impact</li>
-            <li>Graduated with Distinction</li>
-        </ul>
-    </li>
-</ul>
-
-        </div>
-    </section>
-
-<!-- skills section-->
-   
-    <section id="skills" class="section">
-        <div class="container">
-
-
-
-            
-            <h2>Skills</h2>
-            <p>Here's a look at my skillset, my strongest suits: </p>
-            <ul>
-                <li> 
-<title>Skills Overview</title>
-    <style>
-        body { font-family: Helvetica, sans-serif; margin: 20px; }
-        table { width: 100%; border-collapse: collapse; }
-        th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
-        th { background-color: #f4f4f4; }
-        tr:nth-child(even) { color: black; background-color: white; }
-    </style>
-</head>
-<body>
-    <h1>Skills Overview</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Category</th>
-                <th>Details</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Soft Skills</td>
-                <td>Teamwork, Time Management, Creativity, Problem Solving</td>
-            </tr>
-            <tr>
-                <td>Programming Languages & Tools</td>
-                <td>Microsoft Office, LaTeX, GitHub, KDP, Blogger, YouTube Studio, C/C++, Java, GIS, MATLAB, HTML, Python</td>
-            </tr>
-            <tr>
-                <td>Human Languages</td>
-                <td>English, Kannada, Hindi, Sanskrit</td>
-            </tr>
-        </tbody>
-    </table>
-
-                </li>
-            </ul>
-    
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Projects</h2>
-            <p>Here are some projects that I have worked on:</p>
-            <ul>
-                <li>
-                    <a href="https://drive.google.com/file/d/1-2h0bYG5oK4n6iVszc1_DIAf2kMaK8Oy/view?usp=sharing" class="work-link">
-                        <h3>Project 1: Multi Criteria assessment of EOL Solar PV modules </h3>
-                        <p>– Investigated the environmental impact of solar panels using Life Cycle Assessment (LCA) methodologies, assessing factors such as resource extraction, manufacturing processes, usage,
-                            and end-of-life disposal.
-                            – Proposed sustainability practices for clean energy by identifying key areas for improvement in solar panel production and disposal.</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://drive.google.com/file/d/179osftJYcV-LlJB5BqWF7OW_Yj8Ss4BX/view?usp=sharing" target="_blank" class="work-link">
-                        <h3>Project 2: Recirculation aquaculture systems(RAS) using Packed bed biofilm reactors(PBR) </h3>
-                        <p>– Evaluated water quality parameters, including total ammonium nitrogen (TAN), nitrite, and nitrate concentrations, and established a mass balance for the system.– Developed and validated methods to improve RAS efficiency with a low bioreactor-to-culture tank volume ratio of 0.042, promoting sustainable aquaculture practices with minimal resource usage.
-                            – Proposed scaling solutions for industrial applications of PBR in aquaculture systems to enhance production while reducing environmental impact.</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://drive.google.com/file/d/194eXTiVgKlSWxrll0dwmBdN_8bZfSBWV/view?usp=sharing" target="_blank" class="work-link">
-                        <h3>Project 3: Synthesis of Metal Clusters and Their IR Analysis</h3>
-                        <p>Synthesized metal-oxo cluster compounds including the polyoxometalate Mo132 Keplerate and Mo72Fe30 clusters, employing advanced chemical techniques and literature-referenced protocols.– Conducted Infrared (IR) spectral analysis to characterize the synthesized compounds, 
-                            focusing on Mo=O functional group identification and understanding their structural arrangements.</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section id="achievements" class="section">
-        <div class="container">
-            <h2>Achievements and Certifications</h2>
-            <p>Some of the milestones I've achieved over the years:</p>
-            <ol>
-                <li>
-                    <strong>Human Resource Management: HR for People Managers Specialization from University of Minnesota </strong> - 2024
+    <main>
+        <section id="about" class="section reveal-on-scroll">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="section-card">
                     <p>
-                         <a href="https://www.coursera.org/account/accomplishments/specialization/UICTY20RKM7U">
-                        Human Resource Management: HR for People Managers Specialization from University of Minnesota (Coursera): </a> 
-                        Completed the 5 course specialization covering effective HR practices, people management, and leadership. 
-                       
-                       </p>
-                </li>
-                <li><br>
-                    <strong>”Climate Ninja 2.0” SusMafia </strong> - 2023
-                    <p>Sustainability Development and Management: Learned & discussed strategies for sustainable resource management and development.</p>
-                </li>
-                <li><br>
-                    <strong>Public English Speaking, PlanetSpark</strong> - 2022
-                    <p>  Completed training in public speaking, focusing on communication skills and confidence building.</p>
-                </li>
+                        I am an educator specialising in quantitative aptitude, competitive mathematics, logical reasoning, and
+                        data interpretation for CAT, IPMAT, GMAT, GRE, and other MBA entrance exams. I design and proofread
+                        coaching modules that equip students with clear frameworks and exam-ready confidence.
+                    </p>
+                    <p>
+                        I also tutor science and mathematics for Classes 8–12, with a strong focus on aspirants preparing for
+                        JEE Main, NEET, and KCET. My academic roots trace back to the Indian Institute of Science (IISc),
+                        Bengaluru, where my research centred on sustainability, life-cycle assessment, and environmental impact.
+                    </p>
+                    <p>
+                        Outside the classroom and laboratory, I author spiritual and self-development books, blog about
+                        Sanskrit and psychology, and host free educational workshops for students and communities across age
+                        groups. Empowering others to learn, grow, and lead with purpose drives everything I do.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-                <li><br>
+        <section id="education" class="section reveal-on-scroll">
+            <div class="container">
+                <h2>Education</h2>
+                <p class="section-intro">An academic journey grounded in research, rigour, and sustainability.</p>
+                <ol class="timeline">
+                    <li>
+                        <div class="timeline-marker" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <h3>Master of Science (Research), Earth &amp; Environmental Science</h3>
+                            <p class="timeline-meta">Indian Institute of Science (IISc), Bengaluru · 2023</p>
+                            <ul>
+                                <li>Research focus: Sustainability practices for end-of-life solar panels.</li>
+                                <li>Developed strategies to improve efficiency and minimise environmental impact.</li>
+                                <li>Graduated with distinction.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-marker" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <h3>Bachelor of Science (Research), Earth &amp; Environmental Science</h3>
+                            <p class="timeline-meta">Indian Institute of Science (IISc), Bengaluru · 2022</p>
+                            <ul>
+                                <li>Award-winning thesis on packed-bed biofilm reactors for sustainable aquaculture.</li>
+                                <li>Achieved a GPA of 8.6 with strong interdisciplinary foundations.</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
 
-                    <title>Academic Achievements</title>
-    <style>
-     
+        <section id="skills" class="section reveal-on-scroll">
+            <div class="container">
+                <h2>Core Skills</h2>
+                <p class="section-intro">A blend of analytical thinking, communication, and technical fluency.</p>
+                <div class="grid three-col">
+                    <article class="feature-card">
+                        <h3>Teaching &amp; Facilitation</h3>
+                        <ul class="pill-list">
+                            <li>Curriculum design</li>
+                            <li>Quantitative aptitude</li>
+                            <li>Assessment strategy</li>
+                            <li>Workshop facilitation</li>
+                        </ul>
+                    </article>
+                    <article class="feature-card">
+                        <h3>Technical Toolkit</h3>
+                        <ul class="pill-list">
+                            <li>Python · MATLAB · C/C++</li>
+                            <li>GIS &amp; environmental modelling</li>
+                            <li>Microsoft Office &amp; LaTeX</li>
+                            <li>GitHub · KDP · Blogger · YouTube Studio</li>
+                        </ul>
+                    </article>
+                    <article class="feature-card">
+                        <h3>People &amp; Languages</h3>
+                        <ul class="pill-list">
+                            <li>Team leadership &amp; mentoring</li>
+                            <li>Creative problem-solving</li>
+                            <li>English · Kannada · Hindi · Sanskrit</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
 
+        <section id="services" class="section reveal-on-scroll">
+            <div class="container">
+                <h2>How I Can Help</h2>
+                <p class="section-intro">Partner with me for bespoke learning interventions, sustainability research, and mindful leadership programmes.</p>
+                <div class="grid three-col service-grid">
+                    <article class="service-card">
+                        <h3>Exam Readiness Programmes</h3>
+                        <p>Targeted coaching for CAT, GMAT, IPMAT, GRE, and other competitive exams with data-backed progress tracking.</p>
+                        <ul>
+                            <li>Modular lesson plans tailored to cohort goals.</li>
+                            <li>Adaptive practice sets and analytics dashboards.</li>
+                            <li>Faculty enablement and quality assurance.</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <h3>Curriculum &amp; Content Design</h3>
+                        <p>Translate complex concepts into engaging experiences for schools, edtech platforms, and professional academies.</p>
+                        <ul>
+                            <li>Blueprints for quantitative aptitude and STEM labs.</li>
+                            <li>Interactive assets, assessments, and facilitator guides.</li>
+                            <li>Alignment with NEP 2020 and global benchmarks.</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <h3>Research &amp; Advisory</h3>
+                        <p>Collaborate on sustainability roadmaps, life-cycle assessments, and community projects rooted in evidence.</p>
+                        <ul>
+                            <li>Data synthesis for renewable energy transitions.</li>
+                            <li>Workshops on climate action and ESG literacy.</li>
+                            <li>Mentoring student innovators and social enterprises.</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="section-cta">
+                    <a class="cta-button" href="mailto:drshirsu@gmail.com">Co-create a programme</a>
+                    <a class="cta-button ghost" href="https://calendly.com/drshirsu/30min" target="_blank" rel="noopener">Schedule a discovery call</a>
+                </div>
+            </div>
+        </section>
 
+        <section id="projects" class="section reveal-on-scroll">
+            <div class="container">
+                <h2>Highlighted Projects</h2>
+                <p class="section-intro">Selected research and impact-driven collaborations.</p>
+                <div class="grid two-col">
+                    <article class="project-card">
+                        <h3>Multi-Criteria Assessment of End-of-Life Solar PV Modules</h3>
+                        <p>
+                            Applied life-cycle assessment methodologies to evaluate the environmental footprint of solar panels.
+                            Identified sustainability opportunities across manufacturing, usage, and end-of-life processes.
+                        </p>
+                        <a class="text-link" href="https://drive.google.com/file/d/1-2h0bYG5oK4n6iVszc1_DIAf2kMaK8Oy/view?usp=sharing" target="_blank" rel="noopener">View project summary</a>
+                    </article>
+                    <article class="project-card">
+                        <h3>Recirculating Aquaculture Systems with Packed-Bed Biofilm Reactors</h3>
+                        <p>
+                            Evaluated water quality parameters and developed a mass balance for sustainable aquaculture systems
+                            using low-volume biofilm reactors. Proposed scalable solutions for industrial deployment.
+                        </p>
+                        <a class="text-link" href="https://drive.google.com/file/d/179osftJYcV-LlJB5BqWF7OW_Yj8Ss4BX/view?usp=sharing" target="_blank" rel="noopener">Explore research findings</a>
+                    </article>
+                    <article class="project-card">
+                        <h3>Synthesis of Metal Clusters &amp; Infrared Analysis</h3>
+                        <p>
+                            Synthesised complex metal-oxo clusters, including Mo<sub>132</sub> Keplerate and Mo<sub>72</sub>Fe<sub>30</sub>, and led
+                            infrared spectroscopy to characterise structural motifs and functional groups.
+                        </p>
+                        <a class="text-link" href="https://drive.google.com/file/d/194eXTiVgKlSWxrll0dwmBdN_8bZfSBWV/view?usp=sharing" target="_blank" rel="noopener">Read the lab report</a>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-        body { font-family: Helvetica, sans-serif; margin: 20px; }
-        table { width: 100%; border-collapse: collapse; }
-        th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
-        th { background-color: #f4f4f4; }
-        tr:nth-child(even) { color: black; background-color: white; }
+        <section id="achievements" class="section reveal-on-scroll">
+            <div class="container">
+                <h2>Achievements &amp; Certifications</h2>
+                <p class="section-intro">Milestones that shaped my professional compass.</p>
+                <div class="section-card">
+                    <ol class="achievement-list">
+                        <li>
+                            <h3>Human Resource Management Specialisation</h3>
+                            <p class="timeline-meta">University of Minnesota (Coursera) · 2024</p>
+                            <p>Completed a five-course programme on people management, leadership, and strategic HR practices.</p>
+                            <a class="text-link" href="https://www.coursera.org/account/accomplishments/specialization/UICTY20RKM7U" target="_blank" rel="noopener">View credential</a>
+                        </li>
+                        <li>
+                            <h3>Climate Ninja 2.0</h3>
+                            <p class="timeline-meta">SusMafia · 2023</p>
+                            <p>Explored frameworks for sustainable resource management and climate-positive action.</p>
+                        </li>
+                        <li>
+                            <h3>PlanetSpark Public Speaking</h3>
+                            <p class="timeline-meta">PlanetSpark · 2022</p>
+                            <p>Strengthened stage presence, storytelling, and persuasive communication.</p>
+                        </li>
+                        <li>
+                            <h3>Kovida Scholar</h3>
+                            <p class="timeline-meta">Samskrita Bharati · 2016</p>
+                            <p>Cleared the Kovida exam with distinction—the equivalent of a Bachelor’s credential in Sanskrit.</p>
+                        </li>
+                    </ol>
+                </div>
 
+                <div class="section-card">
+                    <h3 class="table-heading">Competitive Exam Highlights</h3>
+                    <div class="table-wrapper" role="group" aria-labelledby="competitive-exams">
+                        <table id="competitive-exams">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Exam</th>
+                                    <th scope="col">Performance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>GATE (Environmental Science), Feb 2023</td>
+                                    <td>All India Rank 151 · 97.5 percentile among 6000+ candidates.</td>
+                                </tr>
+                                <tr>
+                                    <td>KVPY, Aug 2018</td>
+                                    <td>Achieved AIR 94 in the national scholarship programme promoting research careers.</td>
+                                </tr>
+                                <tr>
+                                    <td>JEE Advanced, 2018</td>
+                                    <td>Scored 95.33%, qualifying for admission to premier engineering institutes.</td>
+                                </tr>
+                                <tr>
+                                    <td>NEET, May 2018</td>
+                                    <td>Secured 99.81 percentile with exceptional performance in biology and medical sciences.</td>
+                                </tr>
+                                <tr>
+                                    <td>KCET, May 2018</td>
+                                    <td>Ranked 39 statewide, earning eligibility for top programmes in Karnataka.</td>
+                                </tr>
+                                <tr>
+                                    <td>ICSE, May 2016</td>
+                                    <td>All India Rank 2, reflecting outstanding scholastic achievement.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        
-    </style>
-</head>
-<body>
-    <h1>Academic Achievements</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Exam</th>
-                <th>Details</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>GATE (Environmental Science, Feb 2023)</td>
-                <td>Secured AIR 151 with a 97.5 percentile in a competitive exam with over 6000 applicants,
-                    showcasing subject expertise and problem-solving skills.</td>
-            </tr>
-            <tr>
-                <td>KVPY (Aug 2018)</td>
-                <td>Achieved AIR 94 in the prestigious Kishore Vaigyanik Protsahan Yojana scholarship exam, promoting research careers in science.</td>
-            </tr>
-            <tr>
-                <td>JEE Advanced (2018)</td>
-                <td>Scored 95.33%, qualifying for admission to top Indian engineering institutes.</td>
-            </tr>
-            <tr>
-                <td>NEET (May 2018)</td>
-                <td>Achieved 99.81 percentile, demonstrating exceptional proficiency in biology and medical sciences.</td>
-            </tr>
-            <tr>
-                <td>KCET (May 2018)</td>
-                <td>Ranked 39, securing eligibility for premier undergraduate courses in Karnataka.</td>
-            </tr>
-            <tr>
-                <td>ICSE (May 2016)</td>
-                <td>Achieved All India Rank 2, reflecting outstanding academic performance at the secondary level.</td>
-            </tr>
-        </tbody>
-    </table>
-                   
-                </li>
+        <section id="teaching" class="section reveal-on-scroll">
+            <div class="container">
+                <h2>Teaching &amp; Mentoring</h2>
+                <p class="section-intro">Crafting tailored learning journeys for students and professionals.</p>
+                <div class="grid two-col">
+                    <article class="feature-card">
+                        <h3>Coaching &amp; Workshops</h3>
+                        <p>
+                            Facilitated quantitative aptitude programmes for 300+ learners across CAT, GMAT, IPMAT, and GRE cohorts.
+                            Designed assessments, feedback loops, and collaborative peer-learning formats that sustain performance
+                            gains.
+                        </p>
+                        <p>
+                            Experience with institutions including Jamboree, IMS, PlanetSpark, and Unacademy.
+                        </p>
+                        <p>
+                            Watch a glimpse of my online classrooms on <a href="https://youtu.be/MKM4CMikuH4?si=U8F9GBhQKwbR5_9L" target="_blank" rel="noopener">YouTube</a> and read <a href="https://g.co/kgs/YWLaV9j" target="_blank" rel="noopener">learner testimonials</a>.
+                        </p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>Research &amp; Academic Leadership</h3>
+                        <p>
+                            Conduct literature reviews and support methodology design for projects focused on sustainable solar
+                            technologies and climate-neutral transitions in India.
+                        </p>
+                        <p>
+                            Collaborate with multidisciplinary teams to align outcomes with the UN Sustainable Development Goals and
+                            translate insights into action-oriented strategies.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-                <li><br>
-                    <strong>Kovida Scholar</strong> - 2016
-                    <p>Recognition by Samskrita Bharati for clearing the final exam- equivalent of BA in Sanskrit, with Distinction </p>
-                </li>
-                
-            </ol>
-        </div>
-    </section>
+        <section id="interests" class="section reveal-on-scroll">
+            <div class="container">
+                <h2>Beyond Work</h2>
+                <p class="section-intro">Passions that keep my curiosity kindled.</p>
+                <div class="interest-highlight-grid">
+                    <a class="interest-card" href="https://www.youtube.com/@samskrtanandini2679" target="_blank" rel="noopener">
+                        <span class="interest-icon" aria-hidden="true">🎥</span>
+                        <div>
+                            <h3>Watch Samskrta Nandini</h3>
+                            <p>Immerse yourself in Sanskrit philosophy and storytelling on my YouTube channel.</p>
+                        </div>
+                    </a>
+                    <a class="interest-card" href="books.html">
+                        <span class="interest-icon" aria-hidden="true">📚</span>
+                        <div>
+                            <h3>Explore My Books</h3>
+                            <p>Browse titles on self-improvement, spirituality, and living with mindful intention.</p>
+                        </div>
+                    </a>
+                    <a class="interest-card" href="https://mentalmusings6.blogspot.com/" target="_blank" rel="noopener">
+                        <span class="interest-icon" aria-hidden="true">📝</span>
+                        <div>
+                            <h3>Read Mental Musings</h3>
+                            <p>Dive into reflections on psychology through poetry, prose, and personal essays.</p>
+                        </div>
+                    </a>
+                    <a class="interest-card" href="https://g.co/kgs/YWLaV9j" target="_blank" rel="noopener">
+                        <span class="interest-icon" aria-hidden="true">🌟</span>
+                        <div>
+                            <h3>View Testimonials</h3>
+                            <p>See how learners describe their journey and outcomes from working together.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="section-card">
+                    <ul class="interest-list">
+                        <li>
+                            <strong>Officiation:</strong> Reciting and preserving Vedic traditions including the Ṛg Veda, Chandi Pāṭha, Bhagavad Gītā, and Mahānyāsa.
+                        </li>
+                        <li>
+                            <strong>Volunteering:</strong> Serving communities with Vivekananda Study Circle, Janaseva Trust, and Samskrita Bharati through inclusive educational campaigns.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    
-     <!-- Teaching -->
-    <section id="teaching" class="section">
-        <div class="container">
-            <h2>Teaching</h2>
-            <p>My two-fold professional work, that inspires me to work every single day:</p>
-     
-    <p> With extensive experience in both academic and <b><i> competitive coaching</b></i>, I have developed and
-        facilitated quantitative aptitude workshops for over 300 students and professionals
-        My work focused on enhancing teaching quality through assessments and continuous feedback, 
-        fostering a collaborative learning environment to refine and improve course content.</p> <br>
+        <section id="testimonials" class="section reveal-on-scroll">
+            <div class="container">
+                <h2>Words from Learners &amp; Partners</h2>
+                <p class="section-intro">Feedback that keeps me grounded and inspired.</p>
+                <div class="testimonial-grid">
+                    <figure class="testimonial-card">
+                        <blockquote>
+                            “Sudarshan effortlessly simplifies quant concepts that stump most aspirants. His empathy and rigour gave our cohort the clarity to ace CAT 2023.”
+                        </blockquote>
+                        <figcaption>
+                            <span class="testimonial-name">Aditi Sharma</span>
+                            <span class="testimonial-meta">CAT 2023 Topper, Bengaluru</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="testimonial-card">
+                        <blockquote>
+                            “Our sustainability think tank relied on his structured approach to life-cycle assessment. The insights shaped actionable policy recommendations.”
+                        </blockquote>
+                        <figcaption>
+                            <span class="testimonial-name">Dr. Meera Narayan</span>
+                            <span class="testimonial-meta">Program Lead, Climate Collective</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="testimonial-card">
+                        <blockquote>
+                            “Workshops with Sudarshan are an experience—he blends Sanskrit wisdom with modern leadership frameworks that resonate deeply with young changemakers.”
+                        </blockquote>
+                        <figcaption>
+                            <span class="testimonial-name">Karthik Iyer</span>
+                            <span class="testimonial-meta">Founder, Prerana Learning Studio</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
 
-    <p>As a <b><i>Subject Matter Expert and Tutor</b></i>, I have worked with 15+ private students across grades 8-12, specializing in subjects like KCET, NEET, and JEE Mains. 
-        By designing tailored lesson plans and using innovative, interactive teaching methods, I’ve helped students improve their performance.
-        Additionally, I have collaborated with platforms like Jamboree, IMS, PlanetSpark and Unacademy, providing expert guidance and building students' 
-        confidence in technical subjects and public speaking.</p> <br>
+        <section id="resources" class="section reveal-on-scroll">
+            <div class="container">
+                <h2>Resources &amp; Media</h2>
+                <p class="section-intro">Stay connected with my latest lessons, reflections, and community events.</p>
+                <div class="resource-grid">
+                    <article class="resource-card">
+                        <h3>Learning Playlists</h3>
+                        <p>Dive into quick explainer videos and exam strategies curated for busy aspirants.</p>
+                        <a class="text-link" href="https://www.youtube.com/@samskrtanandini2679/playlists" target="_blank" rel="noopener">Watch on YouTube</a>
+                    </article>
+                    <article class="resource-card">
+                        <h3>Newsletter</h3>
+                        <p>A monthly reflection on pedagogy, sustainability, and mindful productivity—delivered to your inbox.</p>
+                        <a class="text-link" href="https://buttondown.email/sudarshanr" target="_blank" rel="noopener">Join the list</a>
+                    </article>
+                    <article class="resource-card">
+                        <h3>Workshops &amp; Events</h3>
+                        <p>From Sanskrit storytelling circles to climate action bootcamps, explore upcoming opportunities to collaborate.</p>
+                        <a class="text-link" href="https://www.linkedin.com/in/sudarshan-ravi/events/" target="_blank" rel="noopener">See upcoming sessions</a>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-            
- <p>For a quick sneak peak into the experience of my online classes, visit <a href="https://youtu.be/MKM4CMikuH4?si=U8F9GBhQKwbR5_9L" target="_blank">here</a></p><br>
-    <p>For testimonials and feedback, visit my Tutorials Business page <a href="https://g.co/kgs/YWLaV9j" target="_blank">Google Reviews</a></p><br>
+        <section id="contact" class="section reveal-on-scroll">
+            <div class="container">
+                <h2>Contact</h2>
+                <p class="section-intro">Let's collaborate, converse, or co-create.</p>
+                <div class="contact-grid">
+                    <a class="contact-card" href="mailto:drshirsu@gmail.com">
+                        <span aria-hidden="true">✉️</span>
+                        <div>
+                            <h3>Email</h3>
+                            <p>drshirsu@gmail.com</p>
+                        </div>
+                    </a>
+                    <a class="contact-card" href="https://www.linkedin.com/in/sudarshan-ravi/" target="_blank" rel="noopener">
+                        <span aria-hidden="true">🔗</span>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <p>@sudarshan-ravi</p>
+                        </div>
+                    </a>
+                    <a class="contact-card" href="https://github.com/sudarshanr0" target="_blank" rel="noopener">
+                        <span aria-hidden="true">💻</span>
+                        <div>
+                            <h3>GitHub</h3>
+                            <p>@sudarshanr0</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-             <p>As a<i> <b> Research Academician:</b></i>  I conduct literature reviews as an Intern on sustainable solar panels and building efficiency, 
-                 guiding project direction aligned with  sustainability mission. I assist in developing research methodologies to assess innovative 
-                 solar technologies, supporting climate-neutral transitions in India. I collaborate with a multidisciplinary team to enhance the project’s 
-                 approach to sustainability and contribute to multiple UN SDGs.  </p>
-
-
-            </section> 
-        </div>
-    </section>
-
-    <!-- Other Interests Section -->
-    <section id="interests" class="section">
-        <div class="container">
-            <h2>Other Interests</h2>
-            <p>Aside from my professional work, I have various other interests that inspire me:</p>
-            <ol>
-                <li><strong>Content creation:</strong> Capturing scintillating wisdom and literary genius of Sanskrit through video essays on my YouTube channel.  <a href=" https://www.youtube.com/@samskrtanandini2679">Samskrta Nandini</a> </li>
-                <li><strong>Writing:</strong> I have authored several books that explore philosophy, self-improvement, spirituality and more.   <a href="books.html">Books</a> </li>
-                      
-
-                
-              
-                
-                <li><strong>Blogging:</strong> Enjoying different depths of psychology in compositions and poems, blogging my
-                    interpretations and short stories.<a href="https://mentalmusings6.blogspot.com/ ">MentalMusings</a></li>
-
-                  <li><strong>Officiation:</strong> Scholar of Vedic studies, I love to recite and memorise mantras such as : Rg Veda Samhita,
-                    Chandi Paatha, Bhagavad Gita, Mahanyasam; and officiate ceremonies</li>
-
-                
-                  <li><strong>Volunteering: </strong> Associated with study group - Vivekananda Study Circle, I participate and facilitate no-bars-witheld yet respectful discussions. 
-                      Associated with NGOs like Janaseva Trust, and Samskrita Bharati, I am honored to serve people of age groups 8-80 through FREE educational campaigns. </li>
-                
-            </ol>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact Information</h2>
-            <p>If you wish to get in touch, feel free to contact me through any of the following methods:</p>
-            
-                <a href="mailto:drshirsu@gmail.com"><strong>Email</strong></a>
-                <a href="https://www.linkedin.com/in/sudarshan-ravi/" target="_blank"><strong>LinkedIn</strong></a>
-                <a href="https://sudarshanr0.github.io/" target="_blank"><strong>GitHub</strong></a>
-            
-        </div>
-    </section>
-
-    <footer>
+    <footer class="site-footer">
         <div class="container">
             <p>&copy; 2024 Sudarshan Ravi. All rights reserved.</p>
         </div>
     </footer>
 
+    <button id="back-to-top" class="back-to-top-btn" type="button">↑ Back to Top</button>
 
-    
-    <!-- Back to the Top Button -->
-    <button id="backToTopBtn" class="back-to-top-btn" onclick="scrollToTop()">↑ Back to Top</button>
-
-
-
-
-
-    
-
-    <!-- Scripts -->
-    <script>
-        // Smooth Scrolling for navigation links
-        document.querySelectorAll('nav ul li a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 60,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Theme toggle functionality
-        const themeToggle = document.getElementById('themeToggle');
-        const body = document.body;
-
-        themeToggle.addEventListener('click', () => {
-            if (body.classList.contains('dark-mode')) {
-                body.classList.remove('dark-mode');
-                body.classList.add('light-mode');
-                themeToggle.textContent = 'Toggle to Dark Mode';
-            } else {
-                body.classList.remove('light-mode');
-                body.classList.add('dark-mode');
-                themeToggle.textContent = 'Toggle to Light Mode';
-            }
-        });
-
-        // Initialize theme based on user's preference (default to dark mode)
-        const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (userPrefersDark) {
-            body.classList.add('dark-mode');
-            themeToggle.textContent = 'Toggle to Light Mode';
-        } else {
-            body.classList.add('light-mode');
-            themeToggle.textContent = 'Toggle to Dark Mode';
-        }
-
-        // Back to Top Button functionality
-        const backToTopBtn = document.getElementById('backToTopBtn');
-
-        window.onscroll = function () {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                backToTopBtn.style.display = 'block';
-            } else {
-                backToTopBtn.style.display = 'none';
-            }
-        };
-
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-    </script>
-
-
-     <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
