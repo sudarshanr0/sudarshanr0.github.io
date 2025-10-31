@@ -5,42 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio website for Sudarshan R – educator, researcher, author, and sustainability advocate.">
     <title>Sudarshan R · Educator | Researcher | Author</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark-mode">
+<body>
     <header class="site-header">
-        <div class="container header-container">
-            <img src="author pic sud.jpg" alt="Portrait of Sudarshan R" class="profile-pic">
-            <div class="header-copy">
+        <div class="container hero-layout">
+            <div class="hero-profile">
+                <div class="hero-avatar">
+                    <img src="author pic sud.jpg" alt="Portrait of Sudarshan R" class="profile-pic">
+                    <div class="hero-pill-group" aria-label="Signature roles">
+                        <span class="hero-pill">Quant Mentor</span>
+                        <span class="hero-pill">Sustainability Researcher</span>
+                        <span class="hero-pill">Samskrta Author</span>
+                    </div>
+                </div>
+                <button id="themeToggle" class="toggle-button" type="button" aria-live="polite" aria-pressed="false">
+                    <span class="toggle-button__icon" aria-hidden="true">🌗</span>
+                    <span class="toggle-button__label" data-theme-label>Toggle theme</span>
+                </button>
+            </div>
+            <div class="hero-copy">
                 <p class="intro-eyebrow">Namaste, I'm</p>
                 <h1>Sudarshan R</h1>
                 <p class="intro-tagline">Educator • Researcher • Author • Sustainability Advocate</p>
                 <p class="intro-summary">
-                    Multipotentialite with a passion for quantitative aptitude, environmental research, Sanskrit literature, and
-                    lifelong learning. I create transformative learning experiences, research sustainable technologies, and share
-                    spiritual wisdom through books, blogs, and community initiatives.
+                    Multipotentialite with a passion for quantitative aptitude, environmental research, Sanskrit literature, and lifelong learning. I design transformative learning journeys, prototype sustainable technologies, and nurture communities through service-driven initiatives.
                 </p>
+                <div class="hero-side-panel" aria-label="Current focus areas">
+                    <h2>Currently crafting</h2>
+                    <ul>
+                        <li>Adaptive quant playbooks for MBA aspirants across India.</li>
+                        <li>Solar circularity frameworks with interdisciplinary researchers at IISc.</li>
+                        <li>Weekly Samskrta storytelling sessions and contemplative workshops.</li>
+                    </ul>
+                    <p class="hero-side-panel__note">Open to collaborations on sustainable innovation, inclusive education, and purposeful leadership.</p>
+                </div>
                 <div class="header-cta">
                     <a class="cta-button" href="#contact">Let's Connect</a>
                     <a class="cta-button ghost" href="books.html">Explore My Books</a>
                 </div>
             </div>
-            <button id="themeToggle" class="toggle-button" type="button" aria-label="Toggle colour theme">Toggle to Light Mode</button>
         </div>
         <div class="container hero-highlights reveal-on-scroll" aria-label="Career highlights">
             <article class="highlight-card" tabindex="0">
+                <span class="highlight-icon" aria-hidden="true">🎓</span>
                 <p class="stat-number" data-count-target="7" data-count-suffix="+">7+</p>
                 <p class="stat-label">Years guiding learners in aptitude and STEM</p>
             </article>
             <article class="highlight-card" tabindex="0">
-                <p class="stat-number" data-count-target="3200" data-count-suffix="+">3200+</p>
+                <span class="highlight-icon" aria-hidden="true">🧠</span>
+                <p class="stat-number" data-count-target="320" data-count-suffix="+">320+</p>
                 <p class="stat-label">Students mentored across exams and workshops</p>
             </article>
             <article class="highlight-card" tabindex="0">
+                <span class="highlight-icon" aria-hidden="true">🌱</span>
                 <p class="stat-number" data-count-target="15" data-count-suffix="+">15+</p>
                 <p class="stat-label">Research &amp; writing projects spanning sustainability and Sanskrit</p>
             </article>
             <article class="highlight-card" tabindex="0">
+                <span class="highlight-icon" aria-hidden="true">📚</span>
                 <p class="stat-number" data-count-target="5" data-count-suffix="">5</p>
                 <p class="stat-label">Books authored on spirituality, purpose, and self-leadership</p>
             </article>
@@ -71,9 +97,10 @@
                 <h2>About Me</h2>
                 <div class="section-card">
                     <p>
-                        I am an educator specialising in quantitative aptitude, competitive mathematics, logical reasoning, and
-                        data interpretation for CAT, IPMAT, GMAT, GRE, and other MBA entrance exams. I design and proofread
-                        coaching modules that equip students with clear frameworks and exam-ready confidence.
+                        I am a researcher working on the decarbonisation of energy grids, renewable energy transitions, and
+                        climate change mitigation who also specialises in quantitative aptitude, competitive mathematics, logical
+                        reasoning, and data interpretation for CAT, IPMAT, GMAT, GRE, and other MBA entrance exams. I design and
+                        proofread coaching modules that equip students with clear frameworks and exam-ready confidence.
                     </p>
                     <p>
                         I also tutor science and mathematics for Classes 8–12, with a strong focus on aspirants preparing for
@@ -191,7 +218,7 @@
                 </div>
                 <div class="section-cta">
                     <a class="cta-button" href="mailto:drshirsu@gmail.com">Co-create a programme</a>
-                    <a class="cta-button ghost" href="https://calendly.com/drshirsu/30min" target="_blank" rel="noopener">Schedule a discovery call</a>
+                    <a class="cta-button ghost" href="mailto:drshirsu@gmail.com?subject=Discovery%20Call%20with%20Sudarshan">Email to schedule a discovery call</a>
                 </div>
             </div>
         </section>
@@ -270,6 +297,10 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <tr>
+                                    <td>CAT, 2024</td>
+                                    <td>Scored 97.37 percentile with interview calls from top-tier IIMs; familiar with NMAT, SNAP, and XAT exams.</td>
+                                </tr>
                                 <tr>
                                     <td>GATE (Environmental Science), Feb 2023</td>
                                     <td>All India Rank 151 · 97.5 percentile among 6000+ candidates.</td>
