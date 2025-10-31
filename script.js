@@ -1,25 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
     const themeToggle = document.getElementById("themeToggle");
     const body = document.body;
+
     if (!themeToggle) {
         return;
     }
-
-    const toggleLabel = themeToggle.querySelector('[data-theme-label]');
 
     // Helper to set the theme while clearing previous modifiers
     const applyTheme = (theme) => {
         body.classList.remove("light-mode", "dark-mode");
         body.classList.add(theme);
-        const nextLabel = theme === "dark-mode" ? "Switch to Light Mode" : "Switch to Dark Mode";
-        themeToggle.setAttribute('aria-label', nextLabel);
-        themeToggle.setAttribute('aria-pressed', theme === 'dark-mode' ? 'true' : 'false');
-
-        if (toggleLabel) {
-            toggleLabel.textContent = nextLabel;
-        } else {
-            themeToggle.textContent = nextLabel;
-        }
+        themeToggle.textContent = theme === "dark-mode" ? "Toggle to Light Mode" : "Toggle to Dark Mode";
         localStorage.setItem("theme", theme);
     };
 
