@@ -5,68 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio website for Sudarshan R – educator, researcher, author, and sustainability advocate.">
     <title>Sudarshan R · Educator | Researcher | Author</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="dark-mode">
     <header class="site-header">
-        <div class="container hero-layout">
-            <div class="hero-profile">
-                <div class="hero-avatar">
-                    <img src="author pic sud.jpg" alt="Portrait of Sudarshan R" class="profile-pic">
-                    <div class="hero-pill-group" aria-label="Signature roles">
-                        <span class="hero-pill">Quant Mentor</span>
-                        <span class="hero-pill">Sustainability Researcher</span>
-                        <span class="hero-pill">Samskrta Author</span>
-                    </div>
-                </div>
-                <button id="themeToggle" class="toggle-button" type="button" aria-live="polite" aria-pressed="false">
-                    <span class="toggle-button__icon" aria-hidden="true">🌗</span>
-                    <span class="toggle-button__label" data-theme-label>Toggle theme</span>
-                </button>
-            </div>
-            <div class="hero-copy">
+        <div class="container header-container">
+            <img src="author pic sud.jpg" alt="Portrait of Sudarshan R" class="profile-pic">
+            <div class="header-copy">
                 <p class="intro-eyebrow">Namaste, I'm</p>
                 <h1>Sudarshan R</h1>
                 <p class="intro-tagline">Educator • Researcher • Author • Sustainability Advocate</p>
                 <p class="intro-summary">
-                    Multipotentialite with a passion for quantitative aptitude, environmental research, Sanskrit literature, and lifelong learning. I design transformative learning journeys, prototype sustainable technologies, and nurture communities through service-driven initiatives.
+                    Multipotentialite with a passion for quantitative aptitude, environmental research, Sanskrit literature, and
+                    lifelong learning. I create transformative learning experiences, research sustainable technologies, and share
+                    spiritual wisdom through books, blogs, and community initiatives.
                 </p>
-                <div class="hero-side-panel" aria-label="Current focus areas">
-                    <h2>Currently crafting</h2>
-                    <ul>
-                        <li>Adaptive quant playbooks for MBA aspirants across India.</li>
-                        <li>Solar circularity frameworks with interdisciplinary researchers at IISc.</li>
-                        <li>Weekly Samskrta storytelling sessions and contemplative workshops.</li>
-                    </ul>
-                    <p class="hero-side-panel__note">Open to collaborations on sustainable innovation, inclusive education, and purposeful leadership.</p>
-                </div>
                 <div class="header-cta">
                     <a class="cta-button" href="#contact">Let's Connect</a>
                     <a class="cta-button ghost" href="books.html">Explore My Books</a>
                 </div>
             </div>
+            <button id="themeToggle" class="toggle-button" type="button" aria-label="Toggle colour theme">Toggle to Light Mode</button>
         </div>
         <div class="container hero-highlights reveal-on-scroll" aria-label="Career highlights">
             <article class="highlight-card" tabindex="0">
-                <span class="highlight-icon" aria-hidden="true">🎓</span>
                 <p class="stat-number" data-count-target="7" data-count-suffix="+">7+</p>
                 <p class="stat-label">Years guiding learners in aptitude and STEM</p>
             </article>
             <article class="highlight-card" tabindex="0">
-                <span class="highlight-icon" aria-hidden="true">🧠</span>
-                <p class="stat-number" data-count-target="320" data-count-suffix="+">320+</p>
+                <p class="stat-number" data-count-target="3200" data-count-suffix="+">3200+</p>
                 <p class="stat-label">Students mentored across exams and workshops</p>
             </article>
             <article class="highlight-card" tabindex="0">
-                <span class="highlight-icon" aria-hidden="true">🌱</span>
                 <p class="stat-number" data-count-target="15" data-count-suffix="+">15+</p>
                 <p class="stat-label">Research &amp; writing projects spanning sustainability and Sanskrit</p>
             </article>
             <article class="highlight-card" tabindex="0">
-                <span class="highlight-icon" aria-hidden="true">📚</span>
                 <p class="stat-number" data-count-target="5" data-count-suffix="">5</p>
                 <p class="stat-label">Books authored on spirituality, purpose, and self-leadership</p>
             </article>
@@ -97,10 +71,9 @@
                 <h2>About Me</h2>
                 <div class="section-card">
                     <p>
-                        I am a researcher working on the decarbonisation of energy grids, renewable energy transitions, and
-                        climate change mitigation who also specialises in quantitative aptitude, competitive mathematics, logical
-                        reasoning, and data interpretation for CAT, IPMAT, GMAT, GRE, and other MBA entrance exams. I design and
-                        proofread coaching modules that equip students with clear frameworks and exam-ready confidence.
+                        I am an educator specialising in quantitative aptitude, competitive mathematics, logical reasoning, and
+                        data interpretation for CAT, IPMAT, GMAT, GRE, and other MBA entrance exams. I design and proofread
+                        coaching modules that equip students with clear frameworks and exam-ready confidence.
                     </p>
                     <p>
                         I also tutor science and mathematics for Classes 8–12, with a strong focus on aspirants preparing for
@@ -218,7 +191,7 @@
                 </div>
                 <div class="section-cta">
                     <a class="cta-button" href="mailto:drshirsu@gmail.com">Co-create a programme</a>
-                    <a class="cta-button ghost" href="mailto:drshirsu@gmail.com?subject=Discovery%20Call%20with%20Sudarshan">Email to schedule a discovery call</a>
+                    <a class="cta-button ghost" href="https://calendly.com/drshirsu/30min" target="_blank" rel="noopener">Schedule a discovery call</a>
                 </div>
             </div>
         </section>
@@ -297,10 +270,6 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>CAT, 2024</td>
-                                    <td>Scored 97.37 percentile with interview calls from top-tier IIMs; familiar with NMAT, SNAP, and XAT exams.</td>
-                                </tr>
                                 <tr>
                                     <td>GATE (Environmental Science), Feb 2023</td>
                                     <td>All India Rank 151 · 97.5 percentile among 6000+ candidates.</td>
@@ -420,29 +389,29 @@
                 <div class="testimonial-grid">
                     <figure class="testimonial-card">
                         <blockquote>
-                            “Sudarshan Sir is an exceptional mentor. He patiently explained every quant concept, created weekly plans for us, and constantly motivated the entire batch to stay consistent.”
+                            “Sudarshan effortlessly simplifies quant concepts that stump most aspirants. His empathy and rigour gave our cohort the clarity to ace CAT 2023.”
                         </blockquote>
                         <figcaption>
-                            <span class="testimonial-name">Madhura Srinivas</span>
-                            <span class="testimonial-meta">Google Review · CAT Aspirant</span>
+                            <span class="testimonial-name">Aditi Sharma</span>
+                            <span class="testimonial-meta">CAT 2023 Topper, Bengaluru</span>
                         </figcaption>
                     </figure>
                     <figure class="testimonial-card">
                         <blockquote>
-                            “He made quant so simple with relatable examples and doubt-solving even late in the night. The personalised support helped me jump from the 70s to a 99 percentile in QA.”
+                            “Our sustainability think tank relied on his structured approach to life-cycle assessment. The insights shaped actionable policy recommendations.”
                         </blockquote>
                         <figcaption>
-                            <span class="testimonial-name">Prateek Jain</span>
-                            <span class="testimonial-meta">Google Review · CAT 2023</span>
+                            <span class="testimonial-name">Dr. Meera Narayan</span>
+                            <span class="testimonial-meta">Program Lead, Climate Collective</span>
                         </figcaption>
                     </figure>
                     <figure class="testimonial-card">
                         <blockquote>
-                            “One of the most dedicated teachers I have met. Even as a working professional I could rely on his structured sessions, recorded recaps, and prompt clarifications over email.”
+                            “Workshops with Sudarshan are an experience—he blends Sanskrit wisdom with modern leadership frameworks that resonate deeply with young changemakers.”
                         </blockquote>
                         <figcaption>
-                            <span class="testimonial-name">Divya Prakash</span>
-                            <span class="testimonial-meta">Google Review · Working Professional</span>
+                            <span class="testimonial-name">Karthik Iyer</span>
+                            <span class="testimonial-meta">Founder, Prerana Learning Studio</span>
                         </figcaption>
                     </figure>
                 </div>
@@ -462,12 +431,12 @@
                     <article class="resource-card">
                         <h3>Newsletter</h3>
                         <p>A monthly reflection on pedagogy, sustainability, and mindful productivity—delivered to your inbox.</p>
-                        <a class="text-link" href="mailto:drshirsu@gmail.com?subject=Subscribe%20to%20Newsletter">Email to join the list</a>
+                        <a class="text-link" href="https://buttondown.email/sudarshanr" target="_blank" rel="noopener">Join the list</a>
                     </article>
                     <article class="resource-card">
                         <h3>Workshops &amp; Events</h3>
                         <p>From Sanskrit storytelling circles to climate action bootcamps, explore upcoming opportunities to collaborate.</p>
-                        <a class="text-link" href="mailto:drshirsu@gmail.com?subject=Workshop%20and%20Event%20Updates">Request the calendar</a>
+                        <a class="text-link" href="https://www.linkedin.com/in/sudarshan-ravi/events/" target="_blank" rel="noopener">See upcoming sessions</a>
                     </article>
                 </div>
             </div>
@@ -492,11 +461,11 @@
                             <p>@sudarshan-ravi</p>
                         </div>
                     </a>
-                    <a class="contact-card" href="https://sudarshanr0.github.io/" target="_blank" rel="noopener">
-                        <span aria-hidden="true">🏠</span>
+                    <a class="contact-card" href="https://github.com/sudarshanr0" target="_blank" rel="noopener">
+                        <span aria-hidden="true">💻</span>
                         <div>
-                            <h3>Website</h3>
-                            <p>sudarshanr0.github.io</p>
+                            <h3>GitHub</h3>
+                            <p>@sudarshanr0</p>
                         </div>
                     </a>
                 </div>
