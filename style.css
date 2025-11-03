@@ -666,10 +666,27 @@ body.light-mode .text-link {
     gap: 1.75rem;
 }
 
-.testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: clamp(1.5rem, 3vw, 2.25rem);
+
+.testimonial-carousel {
+    --testimonial-gap: clamp(1.5rem, 4vw, 2.5rem);
+    position: relative;
+}
+
+.testimonial-carousel.is-enhanced {
+    overflow: hidden;
+}
+
+.testimonial-track {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--testimonial-gap);
+    align-items: stretch;
+}
+
+.testimonial-carousel.is-enhanced .testimonial-track {
+    flex-wrap: nowrap;
+    transition: transform 900ms ease;
+    will-change: transform;
 }
 
 .testimonial-grid.flowing-panels {
@@ -706,10 +723,16 @@ body.light-mode .text-link {
 }
 
 .testimonial-card {
+    flex: 1 1 clamp(260px, 30%, 360px);
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     position: relative;
+    min-width: 0;
+}
+
+.testimonial-carousel.is-enhanced .testimonial-card {
+    flex: 0 0 calc((100% - (var(--testimonial-gap) * 2)) / 3);
 }
 
 .testimonial-card::before {
