@@ -672,6 +672,39 @@ body.light-mode .text-link {
     gap: clamp(1.5rem, 3vw, 2.25rem);
 }
 
+.testimonial-grid.flowing-panels {
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(280px, 1fr);
+    overflow-x: auto;
+    padding-bottom: 0.75rem;
+    scroll-snap-type: x mandatory;
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+    scrollbar-width: thin;
+    scrollbar-color: rgba(148, 163, 184, 0.4) transparent;
+}
+
+.testimonial-grid.flowing-panels::-webkit-scrollbar {
+    height: 6px;
+}
+
+.testimonial-grid.flowing-panels::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.testimonial-grid.flowing-panels::-webkit-scrollbar-thumb {
+    background-color: rgba(148, 163, 184, 0.4);
+    border-radius: 999px;
+}
+
+@media (min-width: 1024px) {
+    .testimonial-grid.flowing-panels {
+        grid-auto-flow: row;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        overflow-x: visible;
+        padding-bottom: 0;
+    }
+}
+
 .testimonial-card {
     display: flex;
     flex-direction: column;
@@ -686,6 +719,10 @@ body.light-mode .text-link {
     top: -0.75rem;
     left: -0.25rem;
     opacity: 0.15;
+}
+
+.testimonial-grid.flowing-panels .testimonial-card {
+    scroll-snap-align: start;
 }
 
 .testimonial-card blockquote {
