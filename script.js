@@ -7,10 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Helper to set the theme while clearing previous modifiers
+    const themeLabel = themeToggle.querySelector('[data-theme-label]');
+
     const applyTheme = (theme) => {
         body.classList.remove("light-mode", "dark-mode");
         body.classList.add(theme);
-        themeToggle.textContent = theme === "dark-mode" ? "Toggle to Light Mode" : "Toggle to Dark Mode";
+        if (themeLabel) {
+            themeLabel.textContent = theme === "dark-mode" ? "Toggle to Light Mode" : "Toggle to Dark Mode";
+        }
+        themeToggle.setAttribute('aria-pressed', String(theme === 'light-mode'));
         localStorage.setItem("theme", theme);
     };
 
@@ -110,6 +115,42 @@ if (revealElements.length) {
 
         revealElements.forEach((element) => revealObserver.observe(element));
     }
+}
+
+
+const revealElementsArray = Array.from(revealElements);
+
+if (!prefersReducedMotion && revealElementsArray.length) {
+    revealElementsArray.forEach((element, index) => {
+        element.style.setProperty('--reveal-delay', `${Math.min(index * 70, 420)}ms`);
+    });
+}
+
+const scrollProgress = document.getElementById('scrollProgress');
+
+if (scrollProgress) {
+    let progressTicking = false;
+
+    const updateScrollProgress = () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = scrollHeight > 0 ? Math.min(scrollTop / scrollHeight, 1) : 0;
+        scrollProgress.style.transform = `scaleX(${progress})`;
+        progressTicking = false;
+    };
+
+    const requestScrollProgressUpdate = () => {
+        if (progressTicking) {
+            return;
+        }
+
+        progressTicking = true;
+        window.requestAnimationFrame(updateScrollProgress);
+    };
+
+    requestScrollProgressUpdate();
+    window.addEventListener('scroll', requestScrollProgressUpdate, { passive: true });
+    window.addEventListener('resize', requestScrollProgressUpdate);
 }
 
 const highlightCounters = document.querySelectorAll('[data-count-target]');
@@ -254,8 +295,11 @@ if (testimonialCarousel) {
     const track = testimonialCarousel.querySelector('[data-testimonial-track]');
     const cards = track ? Array.from(track.querySelectorAll('.testimonial-card')) : [];
     const cardsPerGroup = 3;
+    const shouldEnhanceCarousel = typeof window !== 'undefined' && window.matchMedia
+        ? window.matchMedia('(min-width: 901px)').matches
+        : true;
 
-    if (track && cards.length > cardsPerGroup) {
+    if (track && cards.length > cardsPerGroup && shouldEnhanceCarousel) {
         testimonialCarousel.classList.add('is-enhanced');
 
         const totalGroups = Math.ceil(cards.length / cardsPerGroup);

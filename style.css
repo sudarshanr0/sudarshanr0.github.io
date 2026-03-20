@@ -1,3 +1,34 @@
+
+html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 5.5rem;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    height: auto;
+}
+
+:where(p, li, td, dd, .timeline-meta, .contact-card, .contact-footer-link, .books-hero__intro) {
+    overflow-wrap: anywhere;
+}
+
+
+.scroll-progress {
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    z-index: 120;
+    box-shadow: 0 0 18px rgba(56, 189, 248, 0.35);
+    pointer-events: none;
+}
+
 :root {
     --font-base: 'Inter', 'Manrope', sans-serif;
     --font-heading: 'DM Serif Display', 'Georgia', serif;
@@ -110,6 +141,33 @@ body.light-mode .resource-card {
     background: var(--color-surface-light);
     border: 1px solid rgba(148, 163, 184, 0.18);
     box-shadow: var(--shadow-light);
+}
+
+
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    .section-card,
+    .feature-card,
+    .project-card,
+    .service-card,
+    .testimonial-card,
+    .resource-card,
+    .site-nav,
+    .book-card {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background: rgba(15, 23, 42, 0.92);
+    }
+
+    body.light-mode .section-card,
+    body.light-mode .feature-card,
+    body.light-mode .project-card,
+    body.light-mode .service-card,
+    body.light-mode .testimonial-card,
+    body.light-mode .resource-card,
+    body.light-mode .site-nav,
+    body.light-mode .book-card {
+        background: rgba(255, 255, 255, 0.98);
+    }
 }
 
 .site-header {
@@ -933,6 +991,26 @@ body.light-mode .contact-card:focus {
     box-shadow: 0 12px 25px rgba(37, 99, 235, 0.18);
 }
 
+.contact-footer-link {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.contact-footer-link a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.contact-footer-link a:hover,
+.contact-footer-link a:focus {
+    text-decoration: underline;
+}
+
+body.light-mode .contact-footer-link a {
+    color: #2563eb;
+}
+
 .site-footer {
     padding: 2.5rem 0;
     text-align: center;
@@ -946,7 +1024,7 @@ body.light-mode .site-footer {
 .reveal-on-scroll {
     opacity: 0;
     transform: translateY(26px);
-    transition: opacity 0.75s ease, transform 0.75s ease;
+    transition: opacity 0.75s ease var(--reveal-delay, 0ms), transform 0.75s ease var(--reveal-delay, 0ms);
 }
 
 .reveal-on-scroll.in-view {
@@ -1391,5 +1469,73 @@ body.light-mode .page-footer {
 
     .books-hero__back {
         justify-self: center;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .site-nav {
+        top: 0;
+    }
+
+    .site-nav .container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .site-nav .container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .site-nav ul {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        width: max-content;
+        min-width: 100%;
+        padding-inline: 0.2rem;
+    }
+
+    .site-nav a {
+        white-space: nowrap;
+    }
+
+    .testimonial-carousel.is-enhanced {
+        overflow: visible;
+    }
+
+    .testimonial-track {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+        scroll-snap-type: x proximity;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .testimonial-card {
+        flex: 0 0 min(85vw, 320px);
+        scroll-snap-align: start;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-copy h1,
+    .books-hero__content h1 {
+        word-break: break-word;
+    }
+
+    .contact-card {
+        align-items: flex-start;
+    }
+
+    .contact-card span {
+        margin-top: 0.15rem;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-progress {
+        transition: none;
     }
 }
