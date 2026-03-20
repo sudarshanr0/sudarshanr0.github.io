@@ -933,6 +933,26 @@ body.light-mode .contact-card:focus {
     box-shadow: 0 12px 25px rgba(37, 99, 235, 0.18);
 }
 
+.contact-footer-link {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.contact-footer-link a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.contact-footer-link a:hover,
+.contact-footer-link a:focus {
+    text-decoration: underline;
+}
+
+body.light-mode .contact-footer-link a {
+    color: #2563eb;
+}
+
 .site-footer {
     padding: 2.5rem 0;
     text-align: center;
