@@ -7,10 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Helper to set the theme while clearing previous modifiers
+    const themeLabel = themeToggle.querySelector('[data-theme-label]');
+
     const applyTheme = (theme) => {
         body.classList.remove("light-mode", "dark-mode");
         body.classList.add(theme);
-        themeToggle.textContent = theme === "dark-mode" ? "Toggle to Light Mode" : "Toggle to Dark Mode";
+        if (themeLabel) {
+            themeLabel.textContent = theme === "dark-mode" ? "Toggle to Light Mode" : "Toggle to Dark Mode";
+        }
+        themeToggle.setAttribute('aria-pressed', String(theme === 'light-mode'));
         localStorage.setItem("theme", theme);
     };
 
@@ -254,8 +259,11 @@ if (testimonialCarousel) {
     const track = testimonialCarousel.querySelector('[data-testimonial-track]');
     const cards = track ? Array.from(track.querySelectorAll('.testimonial-card')) : [];
     const cardsPerGroup = 3;
+    const shouldEnhanceCarousel = typeof window !== 'undefined' && window.matchMedia
+        ? window.matchMedia('(min-width: 901px)').matches
+        : true;
 
-    if (track && cards.length > cardsPerGroup) {
+    if (track && cards.length > cardsPerGroup && shouldEnhanceCarousel) {
         testimonialCarousel.classList.add('is-enhanced');
 
         const totalGroups = Math.ceil(cards.length / cardsPerGroup);
